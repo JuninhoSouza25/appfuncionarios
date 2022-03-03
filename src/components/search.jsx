@@ -50,7 +50,7 @@ export default function Search(){
 
     function acharFuncionario(){
         let retornofuncionario = pessoa.map((nomeArg) => {
-            if (nomeArg.chave === convertToSlug(valor.trim().toLowerCase())){
+            if (nomeArg.chave === convertToSlug(valor)){
                return funcionario = nomeArg
             }
         })

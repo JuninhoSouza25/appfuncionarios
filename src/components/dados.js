@@ -104,7 +104,7 @@ export const pessoa = [
         foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Eduardo-Benedicto-.jpg",
     },
     {
-        chave: "eduardo rangel",
+        chave: "eduardo-rangel",
         nome: "Eduardo",
         sobrenome: "Rangel",
         ramal: 4805,
@@ -299,7 +299,7 @@ export const pessoa = [
         foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Lorena.jpg",
     },
     {
-        chave: "lucas araujo",
+        chave: "lucas-araujo",
         nome: "Lucas",
         sobrenome: "Araújo",
         ramal: 4808,
@@ -312,7 +312,7 @@ export const pessoa = [
         foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Lucas-Araujo.jpg",
     },
     {
-        chave: "lucas henrique",
+        chave: "lucas-henrique",
         nome: "Lucas",
         sobrenome: "Henrique",
         ramal: 4805,
@@ -325,7 +325,7 @@ export const pessoa = [
         foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Lucas-Henrique.jpg",
     },
     {
-        chave: "lucas mendonca",
+        chave: "lucas-mendonca",
         nome: "Lucas",
         sobrenome: "Mendonça",
         ramal: 4811,
@@ -338,7 +338,7 @@ export const pessoa = [
         foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Lucas-Mendonca.jpg",
     },
     {
-        chave: "marcos faria",
+        chave: "marcos-faria",
         nome: "Marcos",
         sobrenome: "Faria",
         ramal: 4796,
@@ -351,7 +351,7 @@ export const pessoa = [
         foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Marcos-Faria.jpg",
     },
     {
-        chave: "marcos ferreira",
+        chave: "marcos-ferreira",
         nome: "Marcos",
         sobrenome: "Ferreira",
         ramal: 4798,
@@ -364,7 +364,7 @@ export const pessoa = [
         foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Marcos-Ferreira.jpg",
     },
     {
-        chave: "marcus fantoni",
+        chave: "marcus-fantoni",
         nome: "Marcus",
         sobrenome: "Fantoni",
         ramal: 4804,
@@ -442,7 +442,7 @@ export const pessoa = [
         foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Poliana.jpg",
     },
     {
-        chave: "rafael danilo",
+        chave: "rafael-danilo",
         nome: "Rafael",
         sobrenome: "Danilo",
         ramal: 4814,
@@ -455,7 +455,7 @@ export const pessoa = [
         foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Rafael-Danilo.jpg",
     },
     {
-        chave: "rafael sorbello",
+        chave: "rafael-sorbello",
         nome: "Rafael",
         sobrenome: "Sorbello",
         ramal: 4793,
