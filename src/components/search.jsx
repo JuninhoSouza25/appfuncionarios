@@ -41,7 +41,7 @@ export default function Search(){
                         <h2>{individuo.cargo}</h2>
                         <div className="container-info"><h3>Ramal:</h3><p>{individuo.ramal} </p></div>
                         <div className="container-info"><h3>E-mail:</h3><p><a className="link" href={`mailto:${individuo.email}`}>{individuo.email}</a> </p></div>
-                        <div className="container-info"><h3>Telefone:</h3><p><a className="link" href={`https://api.whatsapp.com/send?phone=${individuo.numero}`}>{individuo.numero}</a> </p></div>
+                        <div className="container-info"><h3>Telefone:</h3><p><a className="link" href={`https://api.whatsapp.com/send?phone=55${individuo.numero}`}>{individuo.numero}</a> </p></div>
                         <div className="container-info"><h3>Setor:</h3><p>{individuo.setor} </p></div>
                     </div>
             </div>
