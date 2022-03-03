@@ -131,7 +131,7 @@ button:hover {
     padding-bottom: 1px;
 }
 
-@media screen and (max-width: 1220px) {
+@media screen and (max-width: 840px) {
 
     .container-principal {
         display: flex;
@@ -174,12 +174,24 @@ button:hover {
 
     .container-img {
         height: 40vh;
+        width: 100%;
+        position: relative;
         justify-content: flex-start;
+        border-radius: 15px;
     }
 
     .container-funcionario {
         justify-content: space-around;
-        width: 90%;
+        width: 100%;
+        height: 330px;
+        position: relative;
+        background-color: #fff;
+        border-radius: 15px;
+        justify-self: flex-end;
+    }
+
+    .container-info {
+        padding-left: 15px;
     }
 
     .card {
@@ -188,13 +200,9 @@ button:hover {
     }
 
     .img-individuo {
-        width: auto;
-        height: 100%;
-        border-radius: 15px 15px 0 0 ;
-    }
-
-    .container-funcionario {
-        height: 300px;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
     }
 
     .buttonbackspam {
