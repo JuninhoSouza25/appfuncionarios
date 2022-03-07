@@ -69,23 +69,21 @@ export default function Search(){
     }
 
     function handleError(){
-        if (!funcionario){
-            setResultado(false);
-            setError(true);
-        }
+        setResultado(false);
+        setError(true);
     }
 
     function acharFuncionario(){
         let retornofuncionario = pessoa.map((nomeArg) => {
             if (nomeArg.chave === convertToSlug(valor)){
-                funcionario = nomeArg
-               return 
-            }
-            else{
-                handleError()
-                return
+               return funcionario = nomeArg
             }
         })
+
+        if (!funcionario){
+            handleError()
+        }
+
         return retornofuncionario
     }
 
