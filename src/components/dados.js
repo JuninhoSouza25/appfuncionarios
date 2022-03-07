@@ -475,7 +475,7 @@ export const pessoa = [
         email: "rafaela@mhedica.com.br",
         numero: 31998007520,
         cargo: "Especialista de Produtos",
-        setor: "Espcialista",
+        setor: "Especialista",
         admissao: "11/02/2019",
         aniversario: "10/08/1989",
         foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Rafaela.jpg",

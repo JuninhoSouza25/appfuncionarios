@@ -6,29 +6,34 @@ import { BiSearch } from "react-icons/bi";
 
 
 
+
 export default function Search(){
     const [valor, setValor] = useState('');
     const [resultado, setResultado] = useState(false);
     const [individuo, setIndividuo] = useState();
     const [fieldSearch, setFieldSearch] = useState(true);
     const [buttonBack, setButtonBack] = useState(false);
+    const [error, setError] = useState(false);
 
+    
     function handleResult(){
         setResultado(true);
         setFieldSearch(false);
         setButtonBack(true);
         acharFuncionario();
-        setIndividuo(funcionario);
-        
+        setIndividuo(funcionario);        
     }
 
     function handleButtonBack(){
         setResultado(false);
         setFieldSearch(true);
-        setButtonBack(false)
+        setButtonBack(false);
+        setError(false);
+        setValor('');
     }
 
     let funcionario
+
 
     function Card(){
         return(
@@ -48,14 +53,40 @@ export default function Search(){
         );
     }
 
+    function Error(){
+        return(
+            <div className='error-container'>
+                    <div className="error-img">
+                        <img src={"https://thumbs.gfycat.com/AngelicShoddyChafer-size_restricted.gif"} alt={"Imagem de lupa"}/>
+                    </div>
+                    <div className="error-texto">
+                        <p>
+                            Desculpe, não encontrei essa pessoa...
+                        </p>
+                    </div>
+            </div>
+        );
+    }
+
+    function handleError(){
+        if (!funcionario){
+            setResultado(false);
+            setError(true);
+        }
+    }
+
     function acharFuncionario(){
         let retornofuncionario = pessoa.map((nomeArg) => {
             if (nomeArg.chave === convertToSlug(valor)){
-               return funcionario = nomeArg
+                funcionario = nomeArg
+               return 
+            }
+            else{
+                handleError()
+                return
             }
         })
         return retornofuncionario
-    
     }
 
     const convertToSlug = (text) => {
@@ -66,11 +97,15 @@ export default function Search(){
           .replace(p, c => b.charAt(a.indexOf(c))) // Replace special chars
           .replace(/&/g, '-and-') // Replace & with 'and'
           .replace(/[\s\W-]+/g, '-') // Replace spaces, non-word characters and dashes with a single dash (-)
-      }
+    }
 
 
     return(
         <div className="container-principal">
+            {error && (
+                <Error />
+            )}
+
             {fieldSearch && (
                 <div className="container-search">
                     <div className="search-component">
@@ -90,14 +125,14 @@ export default function Search(){
                     </div>
                     <button onClick={handleResult}>Buscar</button>
                 </div>
-            )
+            )}
 
-            }
             {resultado && (
                 <div className="card-container">
                     <Card />
                 </div>
             )}
+            
             {buttonBack && (
                 <div className="buttonbackspam">
                     <button className="buttonback" onClick={handleButtonBack}>Voltar</button>
