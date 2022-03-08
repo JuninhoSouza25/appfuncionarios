@@ -179,7 +179,7 @@ export const pessoa = [
         setor: "Vendas",
         admissao: "02/01/2014",
         aniversario: "12/08/1985",
-        foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Glauber.jpge.png",
+        foto: "https://www.mhedica.com.br/wp-content/uploads/2022/02/Glauber.jpg",
     },
     {
         chave: "glauciene",
