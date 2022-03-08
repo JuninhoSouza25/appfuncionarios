@@ -4,9 +4,6 @@ import { useState } from 'react';
 import './search.css';
 import { BiSearch } from "react-icons/bi";
 
-
-
-
 export default function Search(){
     const [valor, setValor] = useState('');
     const [resultado, setResultado] = useState(false);
