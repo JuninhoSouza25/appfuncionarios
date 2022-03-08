@@ -32,8 +32,6 @@ export default function Search(){
         setValor('');
     }
 
-    let funcionario
-
 
     function Card(){
         return(
@@ -73,10 +71,12 @@ export default function Search(){
         setError(true);
     }
 
+    let funcionario
+
     function acharFuncionario(){
-        let retornofuncionario = pessoa.map((nomeArg) => {
-            if (nomeArg.chave === convertToSlug(valor)){
-               return funcionario = nomeArg
+        let retornofuncionario = pessoa.filter((nomeArg) => {
+            if (nomeArg.chave.includes(convertToSlug(valor))){
+                return funcionario = nomeArg
             }
         })
 
