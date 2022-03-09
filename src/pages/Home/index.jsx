@@ -95,7 +95,7 @@ export default function Home() {
                   <h2>{result.cargo}</h2>
                   <div className="container-info"><h3>Ramal:</h3><p>{result.ramal} </p></div>
                   <div className="container-info"><h3>E-mail:</h3><p><a className="link" href={`mailto:${result.email}`}>{result.email}</a> </p></div>
-                  <div className="container-info"><h3>Telefone:</h3><p><a className="link" href={`https://api.whatsapp.com/send?phone=55${result.numero}`}>{result.numero}</a> </p></div>
+                  <div className="container-info"><h3>Telefone:</h3><p><a className="link" target="_blank" href={`https://api.whatsapp.com/send?phone=55${result.numero}`}>{result.numero}</a> </p></div>
                   <div className="container-info"><h3>Setor:</h3><p>{result.setor} </p></div>
               </div>
             </div>
