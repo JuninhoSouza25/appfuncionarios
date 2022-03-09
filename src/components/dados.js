@@ -10,7 +10,7 @@ export const pessoa = [
         setor: "Comercial",
         admissao: "01/09/2015",
         aniversario: "18/03/1983",
-        foto: "https://live.staticflickr.com/65535/51926931549_e93e77795e_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926931549_e93e77795e_z.jpg",
     },
     {
         chave: "brenda",
@@ -23,7 +23,7 @@ export const pessoa = [
         setor: "Especialista",
         admissao: "01/10/2020",
         aniversario: "17/02/1994",
-        foto: "https://live.staticflickr.com/65535/51927227875_97980c045c_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51927227875_97980c045c_z.jpg",
     },
     {
         chave: "bruno",
@@ -36,7 +36,7 @@ export const pessoa = [
         setor: "Vendas",
         admissao: "23/08/2021",
         aniversario: "05/07/1985",
-        foto: "https://live.staticflickr.com/65535/51925620547_36ca1208e6_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51925620547_36ca1208e6_z.jpg",
     },
     {
         chave: "carlos",
@@ -49,7 +49,7 @@ export const pessoa = [
         setor: "Comercial",
         admissao: "03/12/2018",
         aniversario: "18/04/1994",
-        foto: "https://live.staticflickr.com/65535/51925620532_1e45e7aa70_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51925620532_1e45e7aa70_z.jpg",
     },
     {
         chave: "clara",
@@ -62,7 +62,7 @@ export const pessoa = [
         setor: "Marketing",
         admissao: "01/07/2021",
         aniversario: "01/04/2009",
-        foto: "https://live.staticflickr.com/65535/51926683478_6f26478e75_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683478_6f26478e75_z.jpg",
     },
     {
         chave: "claudio",
@@ -75,7 +75,7 @@ export const pessoa = [
         setor: "Assistência Técnica",
         admissao: "01/04/2009",
         aniversario: "22/05/1978",
-        foto: "https://live.staticflickr.com/65535/51926683463_6f78334aa6_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683463_6f78334aa6_z.jpg",
     },
     {
         chave: "douglas",
@@ -88,7 +88,7 @@ export const pessoa = [
         setor: "Assistência Técnica",
         admissao: null,
         aniversario: "23/03/1976",
-        foto: "https://live.staticflickr.com/65535/51926931424_d1700f413f_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926931424_d1700f413f_z.jpg",
     },
     {
         chave: "eduardo-benedicto",
@@ -101,7 +101,7 @@ export const pessoa = [
         cargo: "Consultor de Vendas",
         admissao: "04/06/2018",
         aniversario: "04/01/1982",
-        foto: "https://live.staticflickr.com/65535/51926931409_f9ddd9c0c3_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926931409_f9ddd9c0c3_z.jpg",
     },
     {
         chave: "eduardo-rangel",
@@ -114,7 +114,7 @@ export const pessoa = [
         setor: "Almoxarifado",
         admissao: "04/02/2022",
         aniversario: "23/03/1986",
-        foto: "https://live.staticflickr.com/65535/51926931399_60205947aa_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926931399_60205947aa_z.jpg",
     },
     {
         chave: "elizangela",
@@ -127,7 +127,7 @@ export const pessoa = [
         setor: "Comercial",
         admissao: "03/08/2021",
         aniversario: "06/08/1994",
-        foto: "https://live.staticflickr.com/65535/51925620437_4e6b2f36b8_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51925620437_4e6b2f36b8_z.jpg",
     },
     {
         chave: "eugenio",
@@ -140,7 +140,7 @@ export const pessoa = [
         setor: "TI",
         admissao: "02/05/2019",
         aniversario: "25/06/1988",
-        foto: "https://live.staticflickr.com/65535/51926931334_9084d1d89d_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926931334_9084d1d89d_z.jpg",
     },
     {
         chave: "fabio",
@@ -153,7 +153,7 @@ export const pessoa = [
         setor: "Assistência Técnica",
         admissao: "13/09/2021",
         aniversario: "05/01/1979",
-        foto: "https://live.staticflickr.com/65535/51927227680_171db12f30_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51927227680_171db12f30_z.jpg",
     },
     {
         chave: "fernanda-moreira",
@@ -166,7 +166,7 @@ export const pessoa = [
         setor: "Financeiro",
         admissao: null,
         aniversario: null,
-        foto: "https://live.staticflickr.com/65535/51926683288_a06b28edc5_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683288_a06b28edc5_z.jpg",
     },
     {
         chave: "fernanda-rodrigues",
@@ -179,7 +179,7 @@ export const pessoa = [
         setor: "Especialista",
         admissao: "28/10/2019",
         aniversario: "11/05/1985",
-        foto: "https://live.staticflickr.com/65535/51926591661_8285779e3e_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926591661_8285779e3e_z.jpg",
     },
     {
         chave: "glauber",
@@ -192,7 +192,7 @@ export const pessoa = [
         setor: "Vendas",
         admissao: "02/01/2014",
         aniversario: "12/08/1985",
-        foto: "https://live.staticflickr.com/65535/51926683253_74b8f5c8d5_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683253_74b8f5c8d5_z.jpg",
     },
     {
         chave: "glauciene",
@@ -200,12 +200,12 @@ export const pessoa = [
         sobrenome: "Silva",
         ramal: 4795,
         email: "glauciene@mhedica.com.br",
-        numero: 31998797328,
+        numero: 31990606231,
         cargo: "Analista Financeiro",
         setor: "Financeiro",
         admissao: "02/01/2020",
         aniversario: "01/03/1983",
-        foto: "https://live.staticflickr.com/65535/51926591556_4000bc32bc_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926591556_4000bc32bc_z.jpg",
     },
     {
         chave: "jacimara",
@@ -218,7 +218,7 @@ export const pessoa = [
         setor: "Assistência Técnica",
         admissao: "01/10/2020",
         aniversario: "18/04/1994",
-        foto: "https://live.staticflickr.com/65535/51926683218_d51c0f4996_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683218_d51c0f4996_z.jpg",
     },
     {
         chave: "jane",
@@ -231,7 +231,7 @@ export const pessoa = [
         setor: "Recepção",
         admissao: "02/10/2017",
         aniversario: "27/03/1985",
-        foto: "https://live.staticflickr.com/65535/51926931074_d8bf3f18db_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926931074_d8bf3f18db_z.jpg",
     },
     {
         chave: "juan",
@@ -244,7 +244,7 @@ export const pessoa = [
         setor: "Assistência Técnica",
         admissao: "20/05/2019",
         aniversario: "17/02/1989",
-        foto: "https://live.staticflickr.com/65535/51926931084_67d22a24dc_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926931084_67d22a24dc_z.jpg",
     },
     {
         chave: "larissa",
@@ -257,7 +257,7 @@ export const pessoa = [
         setor: "Assistência Técnica",
         admissao: "02/03/2020",
         aniversario: "13/06/1996",
-        foto: "https://live.staticflickr.com/65535/51926683098_c84384c689_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683098_c84384c689_z.jpg",
     },
     {
         chave: "leandro",
@@ -270,7 +270,7 @@ export const pessoa = [
         setor: "Almoxarifado",
         admissao: "02/08/2021",
         aniversario: "13/09/1986",
-        foto: "https://live.staticflickr.com/65535/51926591361_d4bb239b33_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926591361_d4bb239b33_z.jpg",
     },
     {
         chave: "leticia",
@@ -283,7 +283,7 @@ export const pessoa = [
         setor: "Financeiro",
         admissao: "01/03/2021",
         aniversario: "08/12/2000",
-        foto: "https://live.staticflickr.com/65535/51926683048_c1615cddda_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683048_c1615cddda_z.jpg",
     },
     {
         chave: "liliana",
@@ -296,7 +296,7 @@ export const pessoa = [
         setor: "Vendas",
         admissao: "10/01/2022",
         aniversario: "04/08/1958",
-        foto: "https://live.staticflickr.com/65535/51926683033_24de37e135_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683033_24de37e135_z.jpg",
     },
     {
         chave: "lorena",
@@ -309,7 +309,7 @@ export const pessoa = [
         setor: "Almoxarifado",
         admissao: "26/04/2021",
         aniversario: "31/08/1996",
-        foto: "https://live.staticflickr.com/65535/51926683018_74a0df881d_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683018_74a0df881d_z.jpg",
     },
     {
         chave: "luana",
@@ -322,7 +322,7 @@ export const pessoa = [
         setor: "Recursos Humanos",
         admissao: null,
         aniversario: null,
-        foto: "https://live.staticflickr.com/65535/51926682983_511b9b8177_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926682983_511b9b8177_z.jpg",
     },
     {
         chave: "lucas-araujo",
@@ -335,7 +335,7 @@ export const pessoa = [
         setor: "Vendas",
         admissao: "10/01/2022",
         aniversario: "09/06/1984",
-        foto: "https://live.staticflickr.com/65535/51926930924_4e84dff23c_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926930924_4e84dff23c_z.jpg",
     },
     {
         chave: "lucas-henrique",
@@ -348,7 +348,7 @@ export const pessoa = [
         setor: "Almoxarifado",
         admissao: "02/04/2020",
         aniversario: "30/06/1995",
-        foto: "https://live.staticflickr.com/65535/51926931874_3645d80b1b_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926931874_3645d80b1b_z.jpg",
     },
     {
         chave: "lucas-mendonca",
@@ -361,7 +361,7 @@ export const pessoa = [
         setor: "Vendas",
         admissao: "01/10/2020",
         aniversario: "26/11/1991",
-        foto: "https://live.staticflickr.com/65535/51926592221_ff1a90eb0b_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926592221_ff1a90eb0b_z.jpg",
     },
     {
         chave: "marcos-faria",
@@ -369,12 +369,12 @@ export const pessoa = [
         sobrenome: "Faria",
         ramal: 4796,
         email: "marcos.faria@mhedica.com.br",
-        numero: 31995403566,
+        numero: 31995403565,
         cargo: "Consultor de Vendas",
         setor: "Vendas",
         admissao: "25/10/2021",
         aniversario: "19/11/1984",
-        foto: "https://live.staticflickr.com/65535/51926592216_81fc987182_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926592216_81fc987182_z.jpg",
     },
     {
         chave: "marcos-ferreira",
@@ -387,20 +387,20 @@ export const pessoa = [
         setor: "Comercial",
         admissao: "31/08/2020",
         aniversario: "09/03/1986",
-        foto: "https://live.staticflickr.com/65535/51926683858_76d2d836f3_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683858_76d2d836f3_z.jpg",
     },
     {
         chave: "marcus-fantoni",
         nome: "Marcus",
         sobrenome: "Fantoni",
-        ramal: 4804,
+        ramal: 4796,
         email: "marcus.fantoni@mhedica.com.br",
         numero: 31984666714,
         cargo: "Gerente de Vendas Imagem",
         setor: "Vendas",
         admissao: "15/09/2021",
         aniversario: "26/03/1970",
-        foto: "https://live.staticflickr.com/65535/51927228165_d73f473de6_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51927228165_d73f473de6_z.jpg",
     },
     {
         chave: "mercia",
@@ -413,7 +413,7 @@ export const pessoa = [
         setor: "Qualidade",
         admissao: "07/02/2022",
         aniversario: "04/05/1982",
-        foto: "https://live.staticflickr.com/65535/51926592161_fd4d240c34_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926592161_fd4d240c34_z.jpg",
     },
     {
         chave: "napoleao",
@@ -426,7 +426,7 @@ export const pessoa = [
         setor: "Diretoria",
         admissao: null,
         aniversario: "16/03/1956",
-        foto: "https://live.staticflickr.com/65535/51926592151_0d70d21102_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926592151_0d70d21102_z.jpg",
     },
     {
         chave: "nayara",
@@ -439,7 +439,7 @@ export const pessoa = [
         setor: "Comercial",
         admissao: "05/11/2014",
         aniversario: "07/08/1983",
-        foto: "https://live.staticflickr.com/65535/51926592131_76601d5a7d_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926592131_76601d5a7d_z.jpg",
     },
     {
         chave: "paulo",
@@ -452,7 +452,7 @@ export const pessoa = [
         setor: "TI",
         admissao: "14/02/2022",
         aniversario: "28/11/2001",
-        foto: "https://live.staticflickr.com/65535/51926683783_bf851bf55c_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683783_bf851bf55c_z.jpg",
     },
     {
         chave: "poliana",
@@ -465,7 +465,7 @@ export const pessoa = [
         setor: "Comercial",
         admissao: "08/11/2021",
         aniversario: "05/02/1988",
-        foto: "https://live.staticflickr.com/65535/51927228115_ce9323a98f_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51927228115_ce9323a98f_z.jpg",
     },
     {
         chave: "rafael-danilo",
@@ -478,7 +478,7 @@ export const pessoa = [
         setor: "Comercial",
         admissao: "23/11/2021",
         aniversario: "25/01/1991",
-        foto: "https://live.staticflickr.com/65535/51927228105_31836f50b1_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51927228105_31836f50b1_z.jpg",
     },
     {
         chave: "rafael-sorbello",
@@ -491,7 +491,7 @@ export const pessoa = [
         setor: "Diretoria",
         admissao: null,
         aniversario: "28/04/1982",
-        foto: "https://live.staticflickr.com/65535/51926683738_2c3be141bd_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683738_2c3be141bd_z.jpg",
     },
     {
         chave: "rafaela",
@@ -504,7 +504,7 @@ export const pessoa = [
         setor: "Especialista",
         admissao: "11/02/2019",
         aniversario: "10/08/1989",
-        foto: "https://live.staticflickr.com/65535/51926592031_ae12c4f3c0_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926592031_ae12c4f3c0_z.jpg",
     },
     {
         chave: "ricardo",
@@ -517,7 +517,7 @@ export const pessoa = [
         setor: "Vendas",
         admissao: "03/02/2020",
         aniversario: "18/01/1976",
-        foto: "https://live.staticflickr.com/65535/51925620697_1ec7b92f09_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51925620697_1ec7b92f09_z.jpg",
     },
     {
         chave: "rubens",
@@ -530,7 +530,7 @@ export const pessoa = [
         setor: "Assistência Técnica",
         admissao: "31/01/2022",
         aniversario: "05/08/1986",
-        foto: "https://live.staticflickr.com/65535/51926931664_c33c7cdcae_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926931664_c33c7cdcae_z.jpg",
     },
     {
         chave: "rudson",
@@ -556,7 +556,7 @@ export const pessoa = [
         setor: "Vendas",
         admissao: "14/10/2021",
         aniversario: "19/10/1976",
-        foto: "https://live.staticflickr.com/65535/51926683653_057dd81e62_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683653_057dd81e62_z.jpg",
     },
     {
         chave: "silvia",
@@ -569,7 +569,7 @@ export const pessoa = [
         setor: "Comercial",
         admissao: "08/09/2017",
         aniversario: "30/04/1979",
-        foto: "https://live.staticflickr.com/65535/51926683628_e54f41cfbd_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683628_e54f41cfbd_z.jpg",
     },
     {
         chave: "stefanie",
@@ -582,7 +582,7 @@ export const pessoa = [
         setor: "Diretoria | Comercial",
         admissao: null,
         aniversario: "06/10/1986",
-        foto: "https://live.staticflickr.com/65535/51925620652_ca8ecc181c_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51925620652_ca8ecc181c_z.jpg",
     },
     {
         chave: "thais",
@@ -595,7 +595,7 @@ export const pessoa = [
         setor: "Vendas",
         admissao: "05/10/2020",
         aniversario: "09/12/1994",
-        foto: "https://live.staticflickr.com/65535/51926591931_cbb12b57d2_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926591931_cbb12b57d2_z.jpg",
     },
     {
         chave: "victor",
@@ -608,7 +608,7 @@ export const pessoa = [
         setor: "Assistência Técnica",
         admissao: "01/08/2009",
         aniversario: "19/11/1977",
-        foto: "https://live.staticflickr.com/65535/51926931594_169e363b48_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926931594_169e363b48_z.jpg",
     },
     {
         chave: "wander",
@@ -621,6 +621,6 @@ export const pessoa = [
         setor: "Vendas",
         admissao: "05/10/2020",
         aniversario: "26/12/1962",
-        foto: "https://live.staticflickr.com/65535/51926683583_2001aca7ed_m.jpg",
+        foto: "https://live.staticflickr.com/65535/51926683583_2001aca7ed_z.jpg",
     },
 ]

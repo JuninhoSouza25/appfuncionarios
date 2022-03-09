@@ -85,7 +85,7 @@ export default function Home() {
         )}
 
         {card && (
-          <div className="card-container">
+          <div className="card-container" key={result.chave}>
             <div className='card'>
               <div className="container-img">
                   <img className="img-individuo" src={result.foto} alt={`Imagem ${result.nome}`} />
