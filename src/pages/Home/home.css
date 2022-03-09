@@ -51,6 +51,19 @@ button:hover {
     animation: slideY 1.5s;
 }
 
+.card-container {
+    width: 900px;
+    height: 400px;
+    margin-top: 50px;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    transition: all ease 1.5s;
+    animation: slideY 1.5s;
+}
+
 .card {
     width: 100%;
     display: flex;
@@ -99,19 +112,6 @@ button:hover {
     color: #1C88C8;
     margin-top: -20px;
     font-size: 14px;
-}
-
-.card-container {
-    width: 50vw;
-    height: 400px;
-    margin-top: 50px;
-    border: none;
-    border-radius: 15px;
-    display: flex;
-    background-color: #fff;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
-    transition: all ease 1.5s;
-    animation: slideY 1.5s;
 }
 
 .container-info {

@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from 'react';
+import React, { useState } from "react";
 import './home.css'
 import Logo from '../../components/logo'
 import Search from '../../components/search'
@@ -42,7 +41,6 @@ export default function Home() {
   }
 
   let searchResult
-
   function handleSearch(){
       let searchReturn = pessoa.filter((name) => {
           if (name.chave.includes(convertToSlug(textInput))){
