@@ -541,7 +541,7 @@ export const pessoa = [
         numero: 31984826738,
         cargo: "Diretor de Vendas",
         setor: "Vendas",
-        admissao: null,
+        admissao: "12/11/2012",
         aniversario: "03/11/1981",
         foto: "https://live.staticflickr.com/65535/51927359672_3ecaf94151_z.jpg",
     },
