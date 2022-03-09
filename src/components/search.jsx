@@ -1,139 +1,25 @@
 import React from "react";
-import { pessoa } from "./dados.js";
-import { useState } from 'react';
 import './search.css';
 import { BiSearch } from "react-icons/bi";
 
-export default function Search(){
-    const [valor, setValor] = useState('');
-    const [resultado, setResultado] = useState(false);
-    const [individuo, setIndividuo] = useState();
-    const [fieldSearch, setFieldSearch] = useState(true);
-    const [buttonBack, setButtonBack] = useState(false);
-    const [error, setError] = useState(false);
-
+export default function Search({value, onChange, onKeyPress, onClick}){
     
-    function handleResult(){
-        setResultado(true);
-        setFieldSearch(false);
-        setButtonBack(true);
-        acharFuncionario();
-        setIndividuo(funcionario);        
-    }
-
-    function handleButtonBack(){
-        setResultado(false);
-        setFieldSearch(true);
-        setButtonBack(false);
-        setError(false);
-        setValor('');
-    }
-
-
-    function Card(){
-        return(
-            <div className='card'>
-                    <div className="container-img">
-                        <img className="img-individuo" src={individuo.foto} alt={`Imagem ${individuo.nome}`} />
-                    </div>
-                    <div className="container-funcionario">
-                        <h1>{individuo.nome} {individuo.sobrenome} </h1>
-                        <h2>{individuo.cargo}</h2>
-                        <div className="container-info"><h3>Ramal:</h3><p>{individuo.ramal} </p></div>
-                        <div className="container-info"><h3>E-mail:</h3><p><a className="link" href={`mailto:${individuo.email}`}>{individuo.email}</a> </p></div>
-                        <div className="container-info"><h3>Telefone:</h3><p><a className="link" href={`https://api.whatsapp.com/send?phone=55${individuo.numero}`}>{individuo.numero}</a> </p></div>
-                        <div className="container-info"><h3>Setor:</h3><p>{individuo.setor} </p></div>
-                    </div>
-            </div>
-        );
-    }
-
-    function Error(){
-        return(
-            <div className='error-container'>
-                    <div className="error-img">
-                        <img src={"https://thumbs.gfycat.com/AngelicShoddyChafer-size_restricted.gif"} alt={"Imagem de lupa"}/>
-                    </div>
-                    <div className="error-texto">
-                        <p>
-                            Desculpe, não encontrei essa pessoa...
-                        </p>
-                    </div>
-            </div>
-        );
-    }
-
-    function handleError(){
-        setResultado(false);
-        setError(true);
-    }
-
-    let funcionario
-
-    function acharFuncionario(){
-        let retornofuncionario = pessoa.filter((nomeArg) => {
-            if (nomeArg.chave.includes(convertToSlug(valor))){
-                return funcionario = nomeArg
-            }
-        })
-
-        if (!funcionario){
-            handleError()
-        }
-
-        return retornofuncionario
-    }
-
-    const convertToSlug = (text) => {
-        const a = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ·/_,:;'
-        const b = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh------'
-        const p = new RegExp(a.split('').join('|'), 'g')
-        return text.toString().toLowerCase().trim()
-          .replace(p, c => b.charAt(a.indexOf(c))) // Replace special chars
-          .replace(/&/g, '-and-') // Replace & with 'and'
-          .replace(/[\s\W-]+/g, '-') // Replace spaces, non-word characters and dashes with a single dash (-)
-    }
-
-
     return(
         <div className="container-principal">
-            {error && (
-                <Error />
-            )}
-
-            {fieldSearch && (
-                <div className="container-search">
-                    <div className="search-component">
-                        <BiSearch size={30} color="#A79A9A"/>
-                        <input 
-                        placeholder="Insira o nome de quem você procura"
-                        type="text"
-                        name="search"
-                        id="search"
-                        value={valor}
-                        onChange={ (event) => setValor(event.target.value)}
-                        onKeyPress={event => {
-                            if (event.key === 'Enter') {
-                                handleResult()
-                            }
-                        }}/>
-                    </div>
-                    <button onClick={handleResult}>Buscar</button>
+            <div className="container-search">
+                <div className="search-component">
+                    <BiSearch size={30} color="#A79A9A"/>
+                    <input 
+                    placeholder="Insira o nome de quem você procura"
+                    type="text"
+                    name="search"
+                    id="search"
+                    value={value}
+                    onChange={ onChange }
+                    onKeyPress={onKeyPress}/>
                 </div>
-            )}
-
-            {resultado && (
-                <div className="card-container">
-                    <Card />
-                </div>
-            )}
-            
-            {buttonBack && (
-                <div className="buttonbackspam">
-                    <button className="buttonback" onClick={handleButtonBack}>Voltar</button>
-                </div>
-                
-            )}
+                <button onClick={onClick}>Buscar</button>
+            </div>
         </div>
         
 )}
