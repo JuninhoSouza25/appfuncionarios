@@ -9,7 +9,7 @@ export const pessoa = [
         cargo: "Analista de Faturamento Júnior",
         setor: "Comercial",
         admissao: "01/09/2015",
-        aniversario: "18/03/1983",
+        aniversario: "03/10/2022",
         foto: "https://live.staticflickr.com/65535/51926931549_e93e77795e_z.jpg",
     },
     {
@@ -164,8 +164,8 @@ export const pessoa = [
         numero: null,
         cargo: "Assistente Financeiro",
         setor: "Financeiro",
-        admissao: null,
-        aniversario: null,
+        admissao: "03/03/2022",
+        aniversario: "03/09/1999",
         foto: "https://live.staticflickr.com/65535/51926683288_a06b28edc5_z.jpg",
     },
     {
@@ -320,8 +320,8 @@ export const pessoa = [
         numero: null,
         cargo: "Analista de RH",
         setor: "Recursos Humanos",
-        admissao: null,
-        aniversario: null,
+        admissao: "03/03/2022",
+        aniversario: "26/03/1988",
         foto: "https://live.staticflickr.com/65535/51926682983_511b9b8177_z.jpg",
     },
     {

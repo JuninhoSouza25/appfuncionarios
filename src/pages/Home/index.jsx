@@ -5,7 +5,7 @@ import Search from '../../components/search'
 import LogoMedtech from '../../components/logoMedtech'
 import Error from '../../components/error'
 import { pessoa } from '../../components/dados'
-
+import Birthday from "../../components/birthday";
 
 export default function Home() {
   const [error, setError] = useState(false);
@@ -14,15 +14,22 @@ export default function Home() {
   const [result, setResult] = useState();
   const [fieldSearch, setFieldSearch] = useState(true);
   const [buttonBack, setButtonBack] = useState(false);
-  
+  const [isBirthday, setIsBirthDay] = useState();
 
-  
   function handleCard(){
       setCard(true);
       setFieldSearch(false);
       setButtonBack(true);
       handleSearch();
       setResult(searchResult);
+      compareDates(searchResult.aniversario);
+      return result
+  }
+
+  function compareDates(day){
+    let birthday = new Date(day);
+    let today = new Date().setHours(0,0,0,0);
+    setIsBirthDay(Date.parse(birthday) === today ? true : false)
   }
 
   function handleButtonBack(){
@@ -31,6 +38,7 @@ export default function Home() {
       setButtonBack(false);
       setError(false);
       setTextInput('');
+      setIsBirthDay(false);
   }
 
   
@@ -42,9 +50,9 @@ export default function Home() {
 
   let searchResult
   function handleSearch(){
-      let searchReturn = pessoa.filter((name) => {
+      let searchReturn = pessoa.map((name) => {
           if (name.chave.includes(convertToSlug(textInput))){
-              return searchResult = name
+              searchResult = name
           }
       })
 
@@ -82,6 +90,10 @@ export default function Home() {
                 handleCard()
             }}} 
           onClick={handleCard}/>
+        )}
+
+        {isBirthday && (
+          <Birthday />
         )}
 
         {card && (

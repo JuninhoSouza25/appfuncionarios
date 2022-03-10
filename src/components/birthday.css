@@ -1,0 +1,14 @@
+.bday-container {
+    padding-top: 25px;
+    width: 900px;
+    height: 50px;
+    text-align: center;
+}
+
+.bday-title {
+    color: #1C88C8;
+}
+
+.bday-text {
+    padding-top: 5px;
+}
