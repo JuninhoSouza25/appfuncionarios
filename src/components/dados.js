@@ -9,7 +9,7 @@ export const pessoa = [
         cargo: "Analista de Faturamento Júnior",
         setor: "Comercial",
         admissao: "01/09/2015",
-        aniversario: "03/10/2022",
+        aniversario: "03/03/1983",
         foto: "https://live.staticflickr.com/65535/51926931549_e93e77795e_z.jpg",
     },
     {
