@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import './home.css'
-import Logo from '../../components/logo'
-import Search from '../../components/search'
-import LogoMedtech from '../../components/logoMedtech'
-import Error from '../../components/error'
-import { pessoa } from '../../components/dados'
+import './home.css';
+import Logo from '../../components/logo';
+import Search from '../../components/search';
+import LogoMedtech from '../../components/logoMedtech';
+import Error from '../../components/error';
+import { pessoa } from '../../components/dados';
 import Birthday from "../../components/birthday";
 
 export default function Home() {
@@ -26,10 +26,10 @@ export default function Home() {
       return result
   }
 
-  function compareDates(day){
-    let birthday = new Date(day);
+  function compareDates(date){
+    let birthday = new Date(date);
     let today = new Date().setHours(0,0,0,0);
-    setIsBirthDay(Date.parse(birthday) === today ? true : false)
+    setIsBirthDay(birthday.setFullYear(2022) === today ? true : false)
   }
 
   function handleButtonBack(){
@@ -40,8 +40,6 @@ export default function Home() {
       setTextInput('');
       setIsBirthDay(false);
   }
-
-  
 
   function handleError(){
       setCard(false);
