@@ -26,12 +26,6 @@ export default function Home() {
       return result
   }
 
-  function compareDates(date){
-    let birthday = new Date(date);
-    let today = new Date().setHours(0,0,0,0);
-    setIsBirthDay(birthday.setFullYear(2022) === today ? true : false)
-  }
-
   function handleButtonBack(){
       setCard(false);
       setFieldSearch(true);
@@ -46,7 +40,14 @@ export default function Home() {
       setError(true);
   }
 
+  function compareDates(date){
+    let birthday = new Date(date);
+    let today = new Date().setHours(0,0,0,0);
+    setIsBirthDay(birthday.setFullYear(2022) === today ? true : false)
+  }
+
   let searchResult
+  
   function handleSearch(){
       let searchReturn = pessoa.map((name) => {
           if (name.chave.includes(convertToSlug(textInput))){
