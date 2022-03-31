@@ -174,7 +174,7 @@ export const pessoa = [
         sobrenome: "Moreira",
         ramal: 4795,
         email: "fernanda.moreira@mhedica.com.br",
-        numero: null,
+        numero: 31998797328,
         cargo: "Assistente Financeiro",
         setor: "Financeiro",
         admissao: "03/03/2022",
