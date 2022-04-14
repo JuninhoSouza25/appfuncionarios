@@ -4,7 +4,7 @@ import Logo from '../../components/logo';
 import Search from '../../components/search';
 import LogoMedtech from '../../components/logoMedtech';
 import Error from '../../components/error';
-import { pessoa } from '../../components/dados';
+import { pessoa, grupos } from '../../components/dados';
 import Birthday from "../../components/birthday";
 
 export default function Home() {
@@ -15,6 +15,7 @@ export default function Home() {
   const [fieldSearch, setFieldSearch] = useState(true);
   const [buttonBack, setButtonBack] = useState(false);
   const [isBirthday, setIsBirthDay] = useState();
+  const [group, setGroup] = useState([])
 
   function handleCard(){
       setCard(true);
@@ -33,6 +34,7 @@ export default function Home() {
       setError(false);
       setTextInput('');
       setIsBirthDay(false);
+      setGroup([''])
   }
 
   function handleError(){
@@ -47,19 +49,29 @@ export default function Home() {
   }
 
   let searchResult
-  
+  let grupoEmail = []
+
   function handleSearch(){
-      let searchReturn = pessoa.map((name) => {
+  
+      pessoa.map((name) => {
           if (name.chave.includes(convertToSlug(textInput))){
               searchResult = name
+              console.log(searchResult.nome)
           }
+      })
+
+      grupos.map((element) => {
+        if (element.membros.includes(searchResult.nome)){
+          grupoEmail.push(element.grupo)
+          grupoEmail.push(', ')
+          setGroup([...group, grupoEmail])
+        }
       })
 
       if (!searchResult){
           handleError()
       }
-
-      return searchReturn
+      return searchResult
   }
 
   const convertToSlug = (text) => {
@@ -108,6 +120,8 @@ export default function Home() {
                   <div className="container-info"><h3>E-mail:</h3><p><a className="link" href={`mailto:${result.email}`}>{result.email}</a> </p></div>
                   <div className="container-info"><h3>Telefone:</h3><p><a className="link" target="_blank" href={`https://api.whatsapp.com/send?phone=55${result.numero}`}>{result.numero}</a> </p></div>
                   <div className="container-info"><h3>Setor:</h3><p>{result.setor} </p></div>
+                  <div className="container-info"><h3>Grupos de Email:</h3><p>{group}</p></div>
+
               </div>
             </div>
           </div>

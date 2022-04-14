@@ -104,19 +104,6 @@ export const pessoa = [
         foto: "https://live.staticflickr.com/65535/51926683463_6f78334aa6_z.jpg",
     },
     {
-        chave: "diretoria",
-        nome: "Diretoria",
-        sobrenome: null,
-        ramal: null,
-        email: "diretoria@mhedica.com.br",
-        numero: null,
-        cargo: "Napoleão, Rafael Sorbello, Douglas, Stefanie",
-        setor: "Diretoria",
-        admissao: null,
-        aniversario: null,
-        foto: null,
-    },
-    {
         chave: "douglas",
         nome: "Douglas",
         sobrenome: "Robert",
@@ -219,19 +206,6 @@ export const pessoa = [
         admissao: "28/10/2019",
         aniversario: "05/11/1985",
         foto: "https://live.staticflickr.com/65535/51926591661_8285779e3e_z.jpg",
-    },
-    {
-        chave: "financeiro",
-        nome: "Financeiro",
-        sobrenome: null,
-        ramal: null,
-        email: "financeiro@mhedica.com.br",
-        numero: null,
-        cargo: "Glauciene, Fernanda Moreira, Stefanie",
-        setor: "Financeiro",
-        admissao: null,
-        aniversario: null,
-        foto: null,
     },
     {
         chave: "glauber",
@@ -469,7 +443,7 @@ export const pessoa = [
     },
     {
         chave: "napoleao",
-        nome: "Napolão",
+        nome: "Napoleão",
         sobrenome: "Sorbello",
         ramal: 4794,
         email: "napoleao@mhedica.com.br",
@@ -518,19 +492,6 @@ export const pessoa = [
         admissao: "08/11/2021",
         aniversario: "02/05/1988",
         foto: "https://live.staticflickr.com/65535/51927228115_ce9323a98f_z.jpg",
-    },
-    {
-        chave: "proposta",
-        nome: "Proposta",
-        sobrenome: null,
-        ramal: null,
-        email: "proposta@mhedica.com.br",
-        numero: null,
-        cargo: "Carlos, Elizangela, Napoleão, Nayara",
-        setor: "Proposta",
-        admissao: null,
-        aniversario: null,
-        foto: null,
     },
     {
         chave: "rafael-danilo",
@@ -688,4 +649,52 @@ export const pessoa = [
         aniversario: "12/26/1962",
         foto: "https://live.staticflickr.com/65535/51926683583_2001aca7ed_z.jpg",
     },
+]
+
+export const grupos = [
+    {
+        grupo: "Application",
+        email: "application@mhedica.com.br",
+        membros: ["Brenda", "Fernanda Rodrigues", "Rafaela"]
+    },
+    {
+        grupo: "Assistência",
+        email: "assistencia@mhedica.com.br",
+        membros: ["Claudio", "Douglas", "Eduardo", "Fabio", "Jacimara", "Juan", "Larissa","Rubens", "Victor"]
+    },
+    {
+        grupo: "Chamado",
+        email: "chamado@mhedica.com.br",
+        membros: ["Claudio", "Douglas", "Eduardo", "Fabio", "Jacimara", "Juan", "Larissa","Rubens", "Victor"]
+    },
+    {
+        grupo: "Comercial",
+        email: "comercial@mhedica.com.br",
+        membros: ["Aline", "Carlos", "Elizangela", "Marcos", "Nayara", "Poliana", "Rafael Danilo", "Silvia", "Stefanie"]
+    },
+    {
+        grupo: "Diretoria",
+        email: "diretoria@mhedica.com.br",
+        membros: ["Douglas", "Napoleão", "Rafael Sorbello", "Stefanie"]
+    },
+    {
+        grupo: "Estoque",
+        email: "estoque@mhedica.com.br",
+        membros: ["Lorena", "Eduardo Rangel", "Leandro", "Lucas Henrique"]
+    },
+    {
+        grupo: "Financeiro",
+        email: "financeiro@mhedica.com.br",
+        membros: ["Glauciene", "Stefanie", "Fernanda Moreira"]
+    },
+    {
+        grupo: "Proposta",
+        email: "proposta@mhedica.com.br",
+        membros: ["Carlos", "Elizangela", "Napoleão", "Nayara"]
+    },
+    {
+        grupo: "Vendas",
+        email: "vendas@mhedica.com.br",
+        membros: ["Bruno Varandas", "Glauber", "Liliana", "Lucas Araujo", "Lucas Mendonça", "Marcos Faria", "Marcus Fantoni", "Napoleão", "Rafael Sorbello", "Ricardo", "Sidney", "Thais", "Wander"]
+    }
 ]
