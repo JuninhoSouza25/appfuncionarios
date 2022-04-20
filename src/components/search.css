@@ -31,16 +31,7 @@ input {
 }
 
 
-@media screen and (max-width: 840px) {
-
-    .container-principal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 80vh;
-        width: 90vw;
-        justify-content: center;
-    }
+@media screen and (max-width: 440px) {
 
     .container-search {
         flex-direction: column;

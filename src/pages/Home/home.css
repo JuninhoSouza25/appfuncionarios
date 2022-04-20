@@ -121,7 +121,7 @@ button:hover {
 
 .container-info {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 
 .container-info h3 {
@@ -140,19 +140,35 @@ button:hover {
     padding-bottom: 1px;
 }
 
+.card-lista-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 900px;
+}
+
 .group-container {
     margin-top: 15px;
     transition: all ease 1.5s;
     animation: slideY 1.5s;
+    border-radius: 15px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    padding: 3px;
+    margin-left: 0;
 }
 
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 440px) {
 
+    .home {
+        height: 100%;
+    }
+    
     .container-principal {
         display: flex;
         flex-direction: column;
         align-items: center;
-        height: 80vh;
+        height: 65vh;
         width: 90vw;
         justify-content: center;
     }
@@ -217,11 +233,15 @@ button:hover {
 
     .button-spam-container {
         margin-top: 30px;
-        width: 30vw;
+        width: 90%;
     }
 
     .button-spam {
-        height: 50px;
+        height: 62px;
+    }
+
+    .card-lista-group {
+        width: 100%;
     }
 
     .container-info {

@@ -18,7 +18,6 @@ export default function Home() {
   const [group, setGroup] = useState([])
   const [grupoOn, setGrupoOn] = useState(false)
   const [buttonGroup, setButtonGroup] = useState(true)
-  const [logoOn, setLogoOn] = useState(true)
 
   function handleCard(){
       setCard(true);
@@ -41,7 +40,6 @@ export default function Home() {
       setButtonGroup(true);
       setGrupoOn(false);
       setGroup([''])
-      setLogoOn(true)
   }
 
   function handleButtonGroup(){
@@ -49,7 +47,6 @@ export default function Home() {
     setGrupoOn(true);
     setButtonBack(true);
     setFieldSearch(false);
-    setLogoOn(false)
   }
 
   function handleError(){
@@ -101,9 +98,9 @@ export default function Home() {
 
   return (
     <div className='home'>
-        {logoOn && (
-          <Logo />
-        )}
+        
+
+        <Logo />
 
         {error && (
             <Error />
@@ -146,7 +143,7 @@ export default function Home() {
 
         {grupoOn && (
           <>
-            <ul style={{display: "flex", flexDirection: "column", justifyContent: "space-around", width: "100%", paddingLeft: "10%"}}>
+            <ul className="card-lista-group">
               {grupos.map((grupos) => 
               <div className="group-container">
                   <h3 clasName="title-group">{grupos.grupo}</h3>
@@ -169,9 +166,8 @@ export default function Home() {
             </div>
         )}
 
-        {logoOn && (
-          <LogoMedtech />
-        )}
+        <LogoMedtech />
+        
     </div>
 
   );
