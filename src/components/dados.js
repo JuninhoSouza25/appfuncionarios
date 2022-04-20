@@ -708,6 +708,6 @@ export const grupos = [
     {
         grupo: "Vendas",
         email: "vendas@mhedica.com.br",
-        membros: ["Antonio"," Bruno Varandas", " Glauber", " Liliana", " Lucas Araujo", " Lucas Mendonça", " Marcos Faria", " Marcus Fantoni", " Napoleão", " Rafael Sorbello", " Ricardo", " Sidney", " Thais", " Wander"]
+        membros: ["Antônio"," Bruno Varandas", " Glauber", " Liliana", " Lucas Araujo", " Lucas Mendonça", " Marcos Faria", " Marcus Fantoni", " Napoleão", " Rafael Sorbello", " Ricardo", " Sidney", " Thais", " Wander"]
     }
 ]
