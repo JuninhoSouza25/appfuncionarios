@@ -13,6 +13,19 @@ export const pessoa = [
         foto: "https://live.staticflickr.com/65535/51926931549_e93e77795e_z.jpg",
     },
     {
+        chave: "antonio",
+        nome: "Antonio",
+        sobrenome: "Souza",
+        ramal: 4807,
+        email: "antonio@mhedica.com.br",
+        numero: 31995373113,
+        cargo: "Consultor de Vendas",
+        setor: "Vendas",
+        admissao: "01/09/2015",
+        aniversario: "03/18/1983",
+        foto: null,
+    },
+    {
         chave: "brenda",
         nome: "Brenda",
         sobrenome: "Costa",
@@ -21,8 +34,8 @@ export const pessoa = [
         numero: 31997207340,
         cargo: "Especialista de Produtos",
         setor: "Especialista",
-        admissao: "01/10/2020",
-        aniversario: "02/17/1994",
+        admissao: null,
+        aniversario: null,
         foto: "https://live.staticflickr.com/65535/51927227875_97980c045c_z.jpg",
     },
     {
@@ -695,6 +708,6 @@ export const grupos = [
     {
         grupo: "Vendas",
         email: "vendas@mhedica.com.br",
-        membros: ["Bruno Varandas", "Glauber", "Liliana", "Lucas Araujo", "Lucas Mendonça", "Marcos Faria", "Marcus Fantoni", "Napoleão", "Rafael Sorbello", "Ricardo", "Sidney", "Thais", "Wander"]
+        membros: ["Antonio","Bruno Varandas", "Glauber", "Liliana", "Lucas Araujo", "Lucas Mendonça", "Marcos Faria", "Marcus Fantoni", "Napoleão", "Rafael Sorbello", "Ricardo", "Sidney", "Thais", "Wander"]
     }
 ]
