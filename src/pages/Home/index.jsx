@@ -16,11 +16,15 @@ export default function Home() {
   const [buttonBack, setButtonBack] = useState(false);
   const [isBirthday, setIsBirthDay] = useState();
   const [group, setGroup] = useState([])
+  const [grupoOn, setGrupoOn] = useState(false)
+  const [buttonGroup, setButtonGroup] = useState(true)
+  const [logoOn, setLogoOn] = useState(true)
 
   function handleCard(){
       setCard(true);
       setFieldSearch(false);
       setButtonBack(true);
+      setButtonGroup(false);
       handleSearch();
       setResult(searchResult);
       compareDates(searchResult.aniversario);
@@ -34,7 +38,18 @@ export default function Home() {
       setError(false);
       setTextInput('');
       setIsBirthDay(false);
+      setButtonGroup(true);
+      setGrupoOn(false);
       setGroup([''])
+      setLogoOn(true)
+  }
+
+  function handleButtonGroup(){
+    setButtonGroup(false);
+    setGrupoOn(true);
+    setButtonBack(true);
+    setFieldSearch(false);
+    setLogoOn(false)
   }
 
   function handleError(){
@@ -86,7 +101,9 @@ export default function Home() {
 
   return (
     <div className='home'>
-        <Logo />
+        {logoOn && (
+          <Logo />
+        )}
 
         {error && (
             <Error />
@@ -127,13 +144,34 @@ export default function Home() {
           </div>
         )}
 
+        {grupoOn && (
+          <>
+            <ul style={{display: "flex", flexDirection: "column", justifyContent: "space-around"}}>
+              {grupos.map((grupos) => 
+              <div>
+                  <h3 style={{marginTop: "5px"}}>{grupos.grupo}</h3>
+                  <div className="container-info"><h3>E-mail:</h3><p><a className="link" href={`mailto:${grupos.email}`}>{grupos.email}</a></p></div>
+                  <div className="container-info"><h3>Membros:</h3><p>{`${grupos.membros}`}</p></div>
+              </div>)}
+            </ul>
+          </>
+        )}
+
         {buttonBack && (
-            <div className="buttonbackspam">
-                <button className="buttonback" onClick={handleButtonBack}>Voltar</button>
+            <div className="button-spam-container">
+                <button className="button-spam" onClick={handleButtonBack}>Voltar</button>
+            </div>
+        )} 
+
+        {buttonGroup && (
+            <div className="button-spam-container button-spam-center">
+                <button className="button-spam" onClick={handleButtonGroup}>Grupos de Emails</button>
             </div>
         )}
 
-        <LogoMedtech />
+        {logoOn && (
+          <LogoMedtech />
+        )}
     </div>
 
   );

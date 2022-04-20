@@ -668,46 +668,46 @@ export const grupos = [
     {
         grupo: "Application",
         email: "application@mhedica.com.br",
-        membros: ["Brenda", "Fernanda Rodrigues", "Rafaela"]
+        membros: ["Brenda", " Fernanda Rodrigues", " Rafaela"]
     },
     {
         grupo: "Assistência",
         email: "assistencia@mhedica.com.br",
-        membros: ["Claudio", "Douglas", "Eduardo", "Fabio", "Jacimara", "Juan", "Larissa","Rubens", "Victor"]
+        membros: ["Claudio", " Douglas", " Eduardo", " Fabio", " Jacimara", " Juan", " Larissa"," Rubens", " Victor"]
     },
     {
         grupo: "Chamado",
         email: "chamado@mhedica.com.br",
-        membros: ["Claudio", "Douglas", "Eduardo", "Fabio", "Jacimara", "Juan", "Larissa","Rubens", "Victor"]
+        membros: ["Claudio", " Douglas", " Eduardo", " Fabio", " Jacimara", " Juan", " Larissa"," Rubens", " Victor"]
     },
     {
         grupo: "Comercial",
         email: "comercial@mhedica.com.br",
-        membros: ["Aline", "Carlos", "Elizangela", "Marcos", "Nayara", "Poliana", "Rafael Danilo", "Silvia", "Stefanie"]
+        membros: ["Aline", " Carlos", " Elizangela", " Marcos", " Nayara", " Poliana", " Rafael Danilo", " Silvia", " Stefanie"]
     },
     {
         grupo: "Diretoria",
         email: "diretoria@mhedica.com.br",
-        membros: ["Douglas", "Napoleão", "Rafael Sorbello", "Stefanie"]
+        membros: ["Douglas", " Napoleão", " Rafael Sorbello", " Stefanie"]
     },
     {
         grupo: "Estoque",
         email: "estoque@mhedica.com.br",
-        membros: ["Lorena", "Eduardo Rangel", "Leandro", "Lucas Henrique"]
+        membros: ["Lorena", " Eduardo Rangel", " Leandro", " Lucas Henrique"]
     },
     {
         grupo: "Financeiro",
         email: "financeiro@mhedica.com.br",
-        membros: ["Glauciene", "Stefanie", "Fernanda Moreira"]
+        membros: ["Glauciene", " Stefanie", " Fernanda Moreira"]
     },
     {
         grupo: "Proposta",
         email: "proposta@mhedica.com.br",
-        membros: ["Carlos", "Elizangela", "Napoleão", "Nayara"]
+        membros: ["Carlos", " Elizangela", " Napoleão", " Nayara"]
     },
     {
         grupo: "Vendas",
         email: "vendas@mhedica.com.br",
-        membros: ["Antonio","Bruno Varandas", "Glauber", "Liliana", "Lucas Araujo", "Lucas Mendonça", "Marcos Faria", "Marcus Fantoni", "Napoleão", "Rafael Sorbello", "Ricardo", "Sidney", "Thais", "Wander"]
+        membros: ["Antonio"," Bruno Varandas", " Glauber", " Liliana", " Lucas Araujo", " Lucas Mendonça", " Marcos Faria", " Marcus Fantoni", " Napoleão", " Rafael Sorbello", " Ricardo", " Sidney", " Thais", " Wander"]
     }
 ]

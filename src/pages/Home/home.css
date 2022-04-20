@@ -37,11 +37,12 @@ button:hover {
     border: 1px solid #004C97;
 }
 
-.buttonback {
+.button-spam {
     border-radius: 15px;
 }
 
-.buttonbackspam {
+.button-spam-container {
+    border-radius: 15px;
     width: 900px;
     height: 100px;
     display: flex;
@@ -49,6 +50,10 @@ button:hover {
     justify-content: flex-end;
     transition: all ease 1.5s;
     animation: slideY 1.5s;
+}
+
+.button-spam-center {
+    justify-content: center;
 }
 
 .card-container {
@@ -208,12 +213,12 @@ button:hover {
         border-radius: 15px;
     }
 
-    .buttonbackspam {
+    .button-spam {
         margin-top: 30px;
         width: 30vw;
     }
 
-    .buttonback {
+    .button-spam-container {
         height: 50px;
     }
 }
