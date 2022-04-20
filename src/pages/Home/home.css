@@ -140,6 +140,12 @@ button:hover {
     padding-bottom: 1px;
 }
 
+.group-container {
+    margin-top: 15px;
+    transition: all ease 1.5s;
+    animation: slideY 1.5s;
+}
+
 @media screen and (max-width: 840px) {
 
     .container-principal {
@@ -198,10 +204,6 @@ button:hover {
         justify-self: flex-end;
     }
 
-    .container-info {
-        padding-left: 15px;
-    }
-
     .card {
         flex-direction: column;
         justify-content: space-between;
@@ -213,12 +215,24 @@ button:hover {
         border-radius: 15px;
     }
 
-    .button-spam {
+    .button-spam-container {
         margin-top: 30px;
         width: 30vw;
     }
 
-    .button-spam-container {
+    .button-spam {
         height: 50px;
+    }
+
+    .container-info {
+        align-items: flex-start;
+        margin-right: 10%;
+    }
+    .group-container h3 {
+        font-size: 1em;
+    }
+
+    .group-container p {
+        font-size: .8em;
     }
 }

@@ -146,10 +146,10 @@ export default function Home() {
 
         {grupoOn && (
           <>
-            <ul style={{display: "flex", flexDirection: "column", justifyContent: "space-around"}}>
+            <ul style={{display: "flex", flexDirection: "column", justifyContent: "space-around", width: "100%", paddingLeft: "10%"}}>
               {grupos.map((grupos) => 
-              <div>
-                  <h3 style={{marginTop: "5px"}}>{grupos.grupo}</h3>
+              <div className="group-container">
+                  <h3 clasName="title-group">{grupos.grupo}</h3>
                   <div className="container-info"><h3>E-mail:</h3><p><a className="link" href={`mailto:${grupos.email}`}>{grupos.email}</a></p></div>
                   <div className="container-info"><h3>Membros:</h3><p>{`${grupos.membros}`}</p></div>
               </div>)}
