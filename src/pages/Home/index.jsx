@@ -71,15 +71,16 @@ export default function Home() {
       pessoa.map((name) => {
           if (name.chave.includes(convertToSlug(textInput))){
               searchResult = name
-              console.log(searchResult.nome)
           }
       })
 
       grupos.map((element) => {
         if (element.membros.includes(searchResult.nome)){
+          console.log(searchResult.nome)
           grupoEmail.push(element.grupo)
           grupoEmail.push(', ')
           setGroup([...group, grupoEmail])
+          console.log(grupoEmail)
         }
       })
 
