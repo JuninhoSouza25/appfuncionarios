@@ -75,12 +75,10 @@ export default function Home() {
       })
 
       grupos.map((element) => {
-        if (element.membros.includes(searchResult.nome)){
-          console.log(searchResult.nome)
+        if (element.key.includes(searchResult.chave)){
           grupoEmail.push(element.grupo)
           grupoEmail.push(', ')
           setGroup([...group, grupoEmail])
-          console.log(grupoEmail)
         }
       })
 
@@ -149,8 +147,8 @@ export default function Home() {
           <>
             <ul className="card-lista-group">
               {grupos.map((grupos) => 
-              <div className="group-container">
-                  <h3 clasName="title-group">{grupos.grupo}</h3>
+              <div className="group-container" key={grupos.grupo}>
+                  <h3 className="title-group">{grupos.grupo}</h3>
                   <div className="container-info"><h3>E-mail:</h3><p><a className="link" href={`mailto:${grupos.email}`}>{grupos.email}</a></p></div>
                   <div className="container-info"><h3>Membros:</h3><p>{`${grupos.membros}`}</p></div>
               </div>)}

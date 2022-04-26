@@ -21,8 +21,8 @@ export const pessoa = [
         numero: 31995373113,
         cargo: "Consultor de Vendas",
         setor: "Vendas",
-        admissao: "01/09/2015",
-        aniversario: "03/18/1983",
+        admissao: null,
+        aniversario: null,
         foto: null,
     },
     {
@@ -666,48 +666,57 @@ export const pessoa = [
 
 export const grupos = [
     {
+        key: ["brenda", "fernanda-rodrigues", "rafaela"],
         grupo: "Application",
         email: "application@mhedica.com.br",
-        membros: ["Brenda", "Fernanda Rodrigues", "Rafaela"]
+        membros: [" Brenda", " Fernanda Rodrigues", " Rafaela"]
     },
     {
+        key: ["claudio", "douglas", "eduardo-benedicto", "fabio", "jacimara", "juan", "larissa","rubens", "victor"],
         grupo: "Assistência",
         email: "assistencia@mhedica.com.br",
-        membros: ["Claudio", "Douglas", "Eduardo Benedicto", "Fabio", "Jacimara", "Juan", "Larissa","Rubens", "Victor"]
+        membros: [" Claudio", " Douglas", " Eduardo Benedicto", " Fabio", " Jacimara", " Juan", " Larissa","Rubens", " Victor"]
     },
     {
+        key: ["claudio", "douglas", "eduardo-benedicto", "fabio", "jacimara", "juan", "larissa","rubens", "victor"],
         grupo: "Chamado",
         email: "chamado@mhedica.com.br",
-        membros: ["Claudio", "Douglas", "Eduardo Benedicto", "Fabio", "Jacimara", "Juan", "Larissa","Rubens", "Victor"]
+        membros: [" Claudio", " Douglas", " Eduardo Benedicto", " Fabio", " Jacimara", " Juan", " Larissa"," Rubens", " Victor"]
     },
     {
+        key: ["aline", "carlos", "elizangela", "marcos-ferreira", "nayara", "poliana", "rafael-danilo", "silvia", "stefanie"],
         grupo: "Comercial",
         email: "comercial@mhedica.com.br",
-        membros: ["Aline", "Carlos", "Elizangela", "Marcos", "Nayara", "Poliana", "Rafael Danilo", "Silvia", "Stefanie"]
+        membros: [" Aline", " Carlos", " Elizangela", " Marcos Ferreira", " Nayara", " Poliana", " Rafael Danilo", " Silvia", " Stefanie"]
     },
     {
+        key: ["douglas", "napoleão", "rafael-sorbello", "stefanie"],
         grupo: "Diretoria",
         email: "diretoria@mhedica.com.br",
-        membros: ["Douglas", "Napoleão", "Rafael Sorbello", "Stefanie"]
+        membros: [" Douglas", " Napoleão", " Rafael Sorbello", " Stefanie"]
     },
     {
+        key: ["lorena", "eduardo-rangel", "leandro", "lucas-henrique"],
         grupo: "Estoque",
         email: "estoque@mhedica.com.br",
-        membros: ["Lorena", "Eduardo Rangel", "Leandro", "Lucas Henrique"]
+        membros: [" Lorena", " Eduardo Rangel", " Leandro", " Lucas Henrique"]
     },
     {
+        key: ["glauciene", "stefanie", "fernanda-moreira"],
         grupo: "Financeiro",
         email: "financeiro@mhedica.com.br",
-        membros: ["Glauciene", "Stefanie", "Fernanda Moreira"]
+        membros: [" Glauciene", " Stefanie", " Fernanda Moreira"]
     },
     {
+        key:["carlos", "elizangela", "napoleao", "nayara"],
         grupo: "Proposta",
         email: "proposta@mhedica.com.br",
-        membros: ["Carlos", "Elizangela", "Napoleão", "Nayara"]
+        membros: [" Carlos", " Elizangela", " Napoleão", " Nayara"]
     },
     {
+        key: ["antonio","bruno-varandas", "glauber", "liliana", "lucas-araujo", "lucas-mendonca", "marcos-faria", "marcus-fantoni", "napoleao", "rafael-sorbello", "ricardo", "sidney", "thais", "wander"],
         grupo: "Vendas",
         email: "vendas@mhedica.com.br",
-        membros: ["Antônio","Bruno Varandas", "Glauber", "Liliana", "Lucas Araujo", "Lucas Mendonça", "Marcos Faria", "Marcus Fantoni", "Napoleão", "Rafael Sorbello", "Ricardo", "Sidney", "Thais", "Wander"]
+        membros: [" Antônio"," Bruno Varandas", " Glauber", " Liliana", " Lucas Araujo", " Lucas Mendonça", " Marcos Faria", " Marcus Fantoni", " Napoleão", " Rafael Sorbello", " Ricardo", " Sidney", " Thais", " Wander"]
     }
 ]
