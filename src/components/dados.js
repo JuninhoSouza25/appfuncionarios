@@ -162,7 +162,7 @@ export const pessoa = [
         ramal: 4800,
         email: "elizangela@mhedica.com.br",
         numero: 31999618153,
-        cargo: "Analista Comercial Júnior",
+        cargo: "Assistênte Comercial Júnior",
         setor: "Comercial",
         admissao: "03/08/2021",
         aniversario: "08/06/1994",
