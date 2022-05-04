@@ -23,7 +23,7 @@ export const pessoa = [
         setor: "Vendas",
         admissao: null,
         aniversario: null,
-        foto: null,
+        foto: "https://live.staticflickr.com/65535/52050503079_d80e89672a_z.jpg",
     },
     {
         chave: "brenda",
