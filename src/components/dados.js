@@ -244,7 +244,7 @@ export const pessoa = [
         setor: "Marketing",
         admissao: "05/05/2022",
         aniversario: "08/19/1994",
-        foto: null,
+        foto: "https://live.staticflickr.com/65535/52052441333_f65b649fdb_z.jpg",
     },
     {
         chave: "jacimara",
