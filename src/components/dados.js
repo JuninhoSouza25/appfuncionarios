@@ -690,6 +690,18 @@ export const grupos = [
         membros: [" Aline", " Carlos", " Elizangela", " Marcos Ferreira", " Nayara", " Poliana", " Rafael Danilo", " Silvia", " Stefanie"]
     },
     {
+        key:["claudio", "lucas-henrique", "rafael-danilo", "stefanie", "silvia", "leticia"],
+        grupo: "Compras Nacionais",
+        email: "comprasnacionais@mhedica.com.br",
+        membros: [" Claudio", " Lucas Henrique", " Rafael Danilo", " Stefanie", " Silvia", " Leticia"]
+    },
+    {
+        key:["claudio", "lucas-henrique", "rafael-danilo", "stefanie", "silvia"],
+        grupo: "Compras Importação",
+        email: "comprasimportacao@mhedica.com.br",
+        membros: [" Claudio", " Lucas Henrique", " Rafael Danilo", " Stefanie", " Silvia"]
+    },
+    {
         key: ["douglas", "napoleao", "rafael-sorbello", "stefanie"],
         grupo: "Diretoria",
         email: "diretoria@mhedica.com.br",
