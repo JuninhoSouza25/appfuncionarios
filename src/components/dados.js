@@ -338,19 +338,6 @@ export const pessoa = [
         foto: "https://live.staticflickr.com/65535/51926683033_24de37e135_z.jpg",
     },
     {
-        chave: "lorena",
-        nome: "Lorena",
-        sobrenome: "Rodrigues",
-        ramal: 4805,
-        email: "almoxarifado@mhedica.com.br",
-        numero: 31984826796,
-        cargo: "Assistente de Almoxarifado Pleno",
-        setor: "Almoxarifado",
-        admissao: "26/04/2021",
-        aniversario: "08/31/1996",
-        foto: "https://live.staticflickr.com/65535/51926683018_74a0df881d_z.jpg",
-    },
-    {
         chave: "luana",
         nome: "Luana",
         sobrenome: "Morelle",
@@ -403,6 +390,19 @@ export const pessoa = [
         foto: "https://live.staticflickr.com/65535/51926592221_ff1a90eb0b_z.jpg",
     },
     {
+        chave: "luiz-claudio",
+        nome: "Luiz",
+        sobrenome: "Claudio",
+        ramal: 4796,
+        email: "luizclaudio.viana@mhedica.com.br",
+        numero: null,
+        cargo: "Auxiliar de Estoque",
+        setor: "Estoque",
+        admissao: "05/10/2022",
+        aniversario: "01/13/1978",
+        foto: "https://live.staticflickr.com/65535/52069506567_12805d8455_z.jpg",
+    },
+    {
         chave: "marcos-faria",
         nome: "Marcos",
         sobrenome: "Faria",
@@ -427,6 +427,19 @@ export const pessoa = [
         admissao: "31/08/2020",
         aniversario: "03/09/1986",
         foto: "https://live.staticflickr.com/65535/51926683858_76d2d836f3_z.jpg",
+    },
+    {
+        chave: "marcos-oliveira",
+        nome: "Marcos Vinicius",
+        sobrenome: "Oliveira",
+        ramal: 4796,
+        email: "almoxarifado@mhedica.com.br",
+        numero: 31984826796,
+        cargo: "Auxiliar de Logistica",
+        setor: "Almoxarifado",
+        admissao: "05/10/2022",
+        aniversario: "06/03/1983",
+        foto: "https://live.staticflickr.com/65535/52069506557_0dbe1f9349_z.jpg",
     },
     {
         chave: "marcus-fantoni",
@@ -708,10 +721,10 @@ export const grupos = [
         membros: [" Douglas", " Napoleão", " Rafael Sorbello", " Stefanie"]
     },
     {
-        key: ["lorena", "eduardo-rangel", "leandro", "lucas-henrique"],
+        key: ["marcos-oliveira","luiz-claudio", "eduardo-rangel", "leandro", "lucas-henrique"],
         grupo: "Estoque",
         email: "estoque@mhedica.com.br",
-        membros: [" Lorena", " Eduardo Rangel", " Leandro", " Lucas Henrique"]
+        membros: [" Marcos Oliveira", " Luiz Claudio",  " Eduardo Rangel", " Leandro", " Lucas Henrique"]
     },
     {
         key: ["glauciene", "stefanie", "fernanda-moreira"],
