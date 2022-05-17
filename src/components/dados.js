@@ -432,7 +432,7 @@ export const pessoa = [
         chave: "marcos-oliveira",
         nome: "Marcos Vinicius",
         sobrenome: "Oliveira",
-        ramal: 4796,
+        ramal: 4805,
         email: "almoxarifado@mhedica.com.br",
         numero: 31984826796,
         cargo: "Auxiliar de Logistica",
