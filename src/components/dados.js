@@ -91,7 +91,7 @@ export const pessoa = [
         foto: "https://live.staticflickr.com/65535/51955020893_4a9a1872d4_z.jpg",
     },
     {
-        chave: "claudio",
+        chave: "claudio-teixeira",
         nome: "Claudio",
         sobrenome: "Teixeira",
         ramal: 4809,
