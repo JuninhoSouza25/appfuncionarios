@@ -709,10 +709,10 @@ export const grupos = [
         membros: [" Claudio", " Lucas Henrique", " Rafael Danilo", " Stefanie", " Silvia", " Leticia"]
     },
     {
-        key:["claudio", "lucas-henrique", "rafael-danilo", "stefanie", "silvia"],
+        key:["claudio", "douglas", "lucas-henrique", "rafael-danilo", "stefanie", "silvia"],
         grupo: "Compras Importação",
         email: "comprasimportacao@mhedica.com.br",
-        membros: [" Claudio", " Lucas Henrique", " Rafael Danilo", " Stefanie", " Silvia"]
+        membros: [" Claudio", "Douglas", " Lucas Henrique", " Rafael Danilo", " Stefanie", " Silvia"]
     },
     {
         key: ["douglas", "napoleao", "rafael-sorbello", "stefanie"],
