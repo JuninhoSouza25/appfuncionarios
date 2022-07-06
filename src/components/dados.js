@@ -733,6 +733,12 @@ export const grupos = [
         membros: [" Glauciene", " Stefanie", " Fernanda Moreira"]
     },
     {
+        key:["carlos", "stefanie", "napoleao", "nayara"],
+        grupo: "Pedido",
+        email: "pedido@mhedica.com.br",
+        membros: [" Carlos", " Stefanie", " Napoleão", " Nayara"]
+    },
+    {
         key:["carlos", "elizangela", "napoleao", "nayara"],
         grupo: "Proposta",
         email: "proposta@mhedica.com.br",
