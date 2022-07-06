@@ -58,7 +58,7 @@ export const pessoa = [
         ramal: 4799,
         email: "carlos@mhedica.com.br",
         numero: 31997490739,
-        cargo: "Analista Comercial Pleno",
+        cargo: "Coordenador de Vendas",
         setor: "Comercial",
         admissao: "03/12/2018",
         aniversario: "04/18/1994",
