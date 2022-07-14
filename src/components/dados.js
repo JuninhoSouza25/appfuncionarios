@@ -265,7 +265,7 @@ export const pessoa = [
         sobrenome: "Mota",
         ramal: 4790,
         email: "recepcao@mhedica.com.br",
-        numero: "Sem número",
+        numero: 31999223482,
         cargo: "Secretária Executiva",
         setor: "Recepção",
         admissao: "02/10/2017",
