@@ -3,6 +3,8 @@ form {
     flex-direction: column;
     justify-content: space-between;
     width: 600px;
+    transition: all ease 1.5s;
+    animation: slideY 1.5s;
 }
 .input-form {
     border: 1px solid #1C88C8;
@@ -29,5 +31,18 @@ input[type='file'] {
     margin-top: 3px;
     border-radius: 15px;
     cursor: text;
+}
+
+.link-animation {
+    transition: all ease 1.5s;
+    animation: slideY 1.5s;
+}
+
+@keyframes slideY{
+    from{
+        transform: translateY(90px);
+    }to{
+        transform: translateY(0);
+    }
 }
 
