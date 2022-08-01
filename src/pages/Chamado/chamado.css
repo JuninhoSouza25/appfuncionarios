@@ -7,11 +7,27 @@ form {
 .input-form {
     border: 1px solid #1C88C8;
     border-radius: 15px;
-    padding: 3px 10px;
+    background-color: none;
+    padding: 5px 10px;
     margin-bottom: 20px;
     margin-top: 3px;
 }
 
-.input-form:focus {
+.input-form:focus, #input-form-button:focus {
     border: 2px solid #1C88C8;
 }
+
+input[type='file'] {
+    display: none;
+}
+
+#input-form-button {
+    border: 1px solid #1C88C8;
+    background-color: none;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    margin-top: 3px;
+    border-radius: 15px;
+    cursor: text;
+}
+

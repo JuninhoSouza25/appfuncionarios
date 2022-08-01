@@ -28,7 +28,8 @@ export default function Chamado(){
 
             <h1>Chamado SAP</h1>
 
-            <form onSubmit={handleSubmit} action="https://formsubmit.co/eugenio@mhedica.com.br" method="POST">
+            <form onSubmit={handleSubmit} action="https://formsubmit.co/eugenio@mhedica.com.br" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_template" value="box"/>
                 <input type="hidden" name="_subject" value={'Chamado SAP ' + formValues.nome}/>
                 <input type="hidden" name="_captcha" value="false"/>
                 <input type="hidden" name="_next" value="https://appfuncionarios.vercel.app/"/>
@@ -36,6 +37,8 @@ export default function Chamado(){
                 <input className='input-form' text='text' name='nome' onChange={handleInputChange} value={formValues.nome || '' }></input>
                 <label>Descreva o problema:</label>
                 <textarea className='input-form' text='textarea' name='descricao' onChange={handleInputChange} value={formValues.descricao || ''}></textarea>
+                <label id='input-form-button'>Anexar um arquivo
+                <input  type="file" name="attachment" accept="image/png, image/jpeg, image/pdf"></input></label>
                 <button className='button-spam' type='submit'>Enviar</button>
             </form>
 
