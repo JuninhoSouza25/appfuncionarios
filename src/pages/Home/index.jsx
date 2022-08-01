@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import './home.css';
 import Logo from '../../components/logo';
 import Search from '../../components/search';
@@ -108,6 +109,14 @@ export default function Home() {
             <Error />
         )}
 
+        {buttonGroup && (
+            <div className="button-spam-container button-spam-align">
+                <button className="button-spam" onClick={handleButtonGroup}>Grupos de Emails</button>
+                <Link className="button-spam link-spam" to="/chamado">Chamado SAP</Link>
+                
+            </div>
+        )}
+
         {fieldSearch && (
           <Search 
           value={textInput} 
@@ -161,12 +170,7 @@ export default function Home() {
                 <button className="button-spam" onClick={handleButtonBack}>Voltar</button>
             </div>
         )} 
-
-        {buttonGroup && (
-            <div className="button-spam-container button-spam-center">
-                <button className="button-spam" onClick={handleButtonGroup}>Grupos de Emails</button>
-            </div>
-        )}
+        
 
         {logoOn && (
           <LogoMedtech />

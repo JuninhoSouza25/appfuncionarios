@@ -32,7 +32,24 @@ button {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
 }
 
-button:hover {
+.link-spam {
+    background-color: #1C88C8;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 0 15px 15px 0;
+    border: none;
+    width: 130px;
+    height: 62px;
+    cursor: pointer;
+    border: 1px solid #1C88C8;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+button:hover, .link-spam:hover {
     background-color: #004C97;
     border: 1px solid #004C97;
 }
@@ -52,8 +69,8 @@ button:hover {
     animation: slideY 1.5s;
 }
 
-.button-spam-center {
-    justify-content: center;
+.button-spam-align {
+    justify-content: space-around;
 }
 
 .card-container {
