@@ -113,7 +113,6 @@ export default function Home() {
             <div className="button-spam-container button-spam-align">
                 <button className="button-spam" onClick={handleButtonGroup}>Grupos de Emails</button>
                 <Link className="button-spam link-spam" to="/chamado">Chamado SAP</Link>
-                
             </div>
         )}
 

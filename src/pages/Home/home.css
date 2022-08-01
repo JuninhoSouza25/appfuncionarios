@@ -211,7 +211,7 @@ button:hover, .link-spam:hover {
     input {
         font-size: 14px;
         display: flex;
-        width: 80%;
+        width: 100%;
     }
 
     button {
@@ -255,11 +255,17 @@ button:hover, .link-spam:hover {
 
     .button-spam-container {
         margin-top: 30px;
-        width: 90%;
+        width: 95%;
+        height: 50%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .button-spam {
         height: 62px;
+        width: 95%;
+        margin-top: 20px;
     }
 
     .card-lista-group {
@@ -270,6 +276,7 @@ button:hover, .link-spam:hover {
         align-items: flex-start;
         margin-right: 10%;
     }
+
     .group-container h3 {
         font-size: 1em;
     }
