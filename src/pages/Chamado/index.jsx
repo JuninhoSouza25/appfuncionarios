@@ -32,7 +32,7 @@ export default function Chamado(){
                 <input type="hidden" name="_template" value="box"/>
                 <input type="hidden" name="_subject" value={'Chamado SAP ' + formValues.nome}/>
                 <input type="hidden" name="_captcha" value="false"/>
-                <input type="hidden" name="_next" value="https://appfuncionarios.vercel.app/"/>
+                <input type="hidden" name="_next" value="https://appfuncionarios.vercel.app/enviado"/>
                 <label>Digite seu nome</label>
                 <input className='input-form' text='text' name='nome' onChange={handleInputChange} value={formValues.nome || '' }></input>
                 <label>Descreva o problema:</label>
