@@ -40,7 +40,7 @@ export default function Chamado(){
                 <label id='input-form-button'>Anexar um arquivo
                 <input  type="file" name="attachment" accept="image/png, image/jpeg, image/pdf"></input></label>
                 <button className='button-spam' type='submit'>Enviar</button>
-                <Link className="button-spam link-spam link-animation" to="/">Inicio</Link>
+                <Link className="button-spam link-spam" to="/">Inicio</Link>
             </form>
 
             
