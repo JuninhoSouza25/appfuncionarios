@@ -47,21 +47,23 @@ input[type='file'] {
 }
 
 @media screen and (max-width: 440px) {
+
+
     form {
-        align-items: center;
         width: 95%;
     }
 
     .input-form {
-        width: 95%;
+        width: 100%;
     }
 
     #input-form-button {
-        width: 95%;
+        width: 100%;
     }
 
     .link-spam {
-        width: 95%;
+        width: 100%;
     }
+
 }
 
