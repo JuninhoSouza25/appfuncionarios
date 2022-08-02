@@ -9,10 +9,11 @@ form {
 .input-form {
     border: 1px solid #1C88C8;
     border-radius: 15px;
-    background-color: none;
+    background-color: transparent;
     padding: 5px 10px;
     margin-bottom: 20px;
     margin-top: 3px;
+    width: 100%;
 }
 
 .input-form:focus, #input-form-button:focus {
@@ -25,7 +26,7 @@ input[type='file'] {
 
 #input-form-button {
     border: 1px solid #1C88C8;
-    background-color: none;
+    background-color: transparent;
     padding: 5px 10px;
     margin-bottom: 20px;
     margin-top: 3px;
