@@ -395,7 +395,7 @@ export const pessoa = [
         sobrenome: "Claudio",
         ramal: 4796,
         email: "luizclaudio.viana@mhedica.com.br",
-        numero: null,
+        numero: 31972501112,
         cargo: "Auxiliar de Estoque",
         setor: "Estoque",
         admissao: "05/10/2022",
@@ -686,12 +686,6 @@ export const grupos = [
     },
     {
         key: ["claudio", "douglas", "eduardo-benedicto", "fabio", "jacimara", "juan", "larissa","rubens", "victor"],
-        grupo: "Assistência",
-        email: "assistencia@mhedica.com.br",
-        membros: [" Claudio", " Douglas", " Eduardo Benedicto", " Fabio", " Jacimara", " Juan", " Larissa","Rubens", " Victor"]
-    },
-    {
-        key: ["claudio", "douglas", "eduardo-benedicto", "fabio", "jacimara", "juan", "larissa","rubens", "victor"],
         grupo: "Chamado",
         email: "chamado@mhedica.com.br",
         membros: [" Claudio", " Douglas", " Eduardo Benedicto", " Fabio", " Jacimara", " Juan", " Larissa"," Rubens", " Victor"]
@@ -725,6 +719,12 @@ export const grupos = [
         grupo: "Estoque",
         email: "estoque@mhedica.com.br",
         membros: [" Marcos Oliveira", " Luiz Claudio",  " Eduardo Rangel", " Leandro", " Lucas Henrique"]
+    },
+    {
+        key: ["aline", "antonio", "brenda", "carlos", "bruno-varandas", "italo", "claudio", "cileia", "douglas", "eduardo-benedicto", "eugenio", "elizangela", "fabio", "fernanda-moreira", "fernanda-rodrigues", "mercia", "glauber", "glauciene", "jacimara", "jane", "juan", "larissa", "leandro", "leticia", "liliana", "lucas-araujo", "marcos-oliveira", "lucas.mendonca", "luana-morelle", "marcos-ferreira", "marcos-faria", "marcus.fantoni", "napoleao", "nayara", "paulo", "poliana", "rafael-sorbello", "rafael-danilo", "rafaela", "ricardo", "rubens", "rudson", "sidney", "silvia", "stefanie", "thais", "victor", "wander","luiz-claudio", "eduardo-rangel", "lucas-henrique"],
+        grupo: "Geral",
+        email: "geral@mhedica.com.br",
+        membros: [" Aline", " Brenda", " Bruno Varandas", " Carlos", " Claudio", " Cileia", " Douglas", " Eduardo Benedicto", " Eduardo Rangel", " Eugênio", " Elizangela", " Fabio", " Fernanda Moreira", " Fernanda Rodrigues", " Mércia", " Glauber", " Glauciene", " Jacimara", " Jane", " Juan", " Larissa", " Leandro", " Leticia", " Liliana", " Lucas Araújo", " Lucas Henrique", " Marcos Oliveira", " Luiz Claudio", " Luana Morelle", " Marcos Ferreira", " Marcos Faria", " Marcus Fantoni", " Napoleão", " Nayara", " Paulo", " Poliana", " Rafael Sorbello", " Rafael Danilo", " Rafaela", " Ricardo", " Rubens", " Rudson", " Sidney", " Silvia", " Stefanie", " Thais", " Victor", " Wander"]
     },
     {
         key: ["glauciene", "stefanie", "fernanda-moreira"],
