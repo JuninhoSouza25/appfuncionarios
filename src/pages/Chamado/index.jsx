@@ -9,7 +9,6 @@ import { Link } from 'react-router-dom';
 
 export default function Chamado(){
     const [ formValues, setFormValues] = useState({});
-    
 
     const handleInputChange = (e) => {
         const {name, value} = e.target;
@@ -32,7 +31,6 @@ export default function Chamado(){
                 <input type="hidden" name="_template" value="box"/>
                 <input type="hidden" name="_subject" value={'Chamado SAP ' + formValues.nome}/>
                 <input type="hidden" name="_captcha" value="false"/>
-                <input type="hidden" name="_next" value="appfuncionarios.vercel.app/enviado"/>
                 <label>Digite seu nome</label>
                 <input className='input-form' text='text' name='nome' onChange={handleInputChange} value={formValues.nome || '' }></input>
                 <label>Descreva o problema:</label>
@@ -42,8 +40,6 @@ export default function Chamado(){
                 <button className='button-spam' type='submit'>Enviar</button>
                 <Link className="button-spam link-spam" to="/">Inicio</Link>
             </form>
-
-            
 
             <LogoMhedTech />
         </div>
