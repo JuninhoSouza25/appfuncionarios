@@ -27,7 +27,7 @@ export default function Chamado(){
 
             <h1>Chamado SAP</h1>
 
-            <form onSubmit={handleSubmit} action="https://formsubmit.co/eugenio@mhedica.com.br" method="POST" enctype="multipart/form-data">
+            <form onSubmit={handleSubmit} action="https://formsubmit.co/paulo@mhedica.com.br" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="_template" value="box"/>
                 <input type="hidden" name="_subject" value={'Chamado SAP ' + formValues.nome}/>
                 <input type="hidden" name="_captcha" value="false"/>

@@ -680,8 +680,8 @@ export const pessoa = [
 export const grupos = [
     {
         key: ["brenda", "fernanda-rodrigues", "rafaela"],
-        grupo: "Application",
-        email: "application@mhedica.com.br",
+        grupo: "Especialistas",
+        email: "especialistas@mhedica.com.br",
         membros: [" Brenda", " Fernanda Rodrigues", " Rafaela"]
     },
     {
@@ -691,22 +691,22 @@ export const grupos = [
         membros: [" Claudio", " Douglas", " Eduardo Benedicto", " Fabio", " Jacimara", " Juan", " Larissa"," Rubens", " Victor"]
     },
     {
-        key: ["aline", "carlos", "elizangela", "marcos-ferreira", "nayara", "poliana", "rafael-danilo", "silvia", "stefanie"],
+        key: ["aline", "carlos", "elizangela", "marcos-ferreira", "nayara", "poliana", "rafael-danilo", "silvia", "stefanie", "jane", "mercia", "leandro", "marcos-oliveira", "leticia", "eduardo-rangel", "lucas-henrique", "luiz-claudio" ],
         grupo: "Comercial",
         email: "comercial@mhedica.com.br",
-        membros: [" Aline", " Carlos", " Elizangela", " Marcos Ferreira", " Nayara", " Poliana", " Rafael Danilo", " Silvia", " Stefanie"]
+        membros: [" Aline", " Carlos", " Elizangela", " Marcos Ferreira", " Nayara", " Poliana", " Rafael Danilo", " Silvia", " Stefanie", " Jane", " Mércia", " Leandro", " Marcos Oliveira", " Leticia", " Eduardo Rangel", " Lucas Henrique", " Luiz Claudio"]
     },
     {
-        key:["claudio", "lucas-henrique", "rafael-danilo", "stefanie", "silvia", "leticia"],
+        key:["rafael-danilo", "stefanie", "silvia", "leticia"],
         grupo: "Compras Nacionais",
         email: "comprasnacionais@mhedica.com.br",
-        membros: [" Claudio", " Lucas Henrique", " Rafael Danilo", " Stefanie", " Silvia", " Leticia"]
+        membros: [" Rafael Danilo", " Stefanie", " Silvia", " Leticia"]
     },
     {
-        key:["claudio", "douglas", "lucas-henrique", "rafael-danilo", "stefanie", "silvia"],
+        key:["claudio", "douglas", "stefanie"],
         grupo: "Compras Importação",
         email: "comprasimportacao@mhedica.com.br",
-        membros: [" Claudio", "Douglas", " Lucas Henrique", " Rafael Danilo", " Stefanie", " Silvia"]
+        membros: [" Claudio", "Douglas", " Stefanie"]
     },
     {
         key: ["douglas", "napoleao", "rafael-sorbello", "stefanie"],
@@ -739,10 +739,10 @@ export const grupos = [
         membros: [" Carlos", " Stefanie", " Napoleão", " Nayara"]
     },
     {
-        key:["carlos", "elizangela", "napoleao", "nayara"],
+        key:["carlos", "elizangela", "napoleao", "nayara", "leandro"],
         grupo: "Proposta",
         email: "proposta@mhedica.com.br",
-        membros: [" Carlos", " Elizangela", " Napoleão", " Nayara"]
+        membros: [" Carlos", " Elizangela", " Napoleão", " Nayara", " Leandro"]
     },
     {
         key: ["antonio","bruno-varandas", "glauber", "liliana", "lucas-araujo", "lucas-mendonca", "marcos-faria", "marcus-fantoni", "napoleao", "rafael-sorbello", "ricardo", "sidney", "thais", "wander"],
