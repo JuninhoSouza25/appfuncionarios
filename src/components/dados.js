@@ -637,7 +637,7 @@ export const pessoa = [
         foto: "https://live.staticflickr.com/65535/51926591931_cbb12b57d2_z.jpg",
     },
     {
-        chave: "victor",
+        chave: "victor-hugo",
         nome: "Victor",
         sobrenome: "Hugo",
         ramal: 4792,
@@ -648,6 +648,19 @@ export const pessoa = [
         admissao: "01/08/2009",
         aniversario: "11/19/1977",
         foto: "https://live.staticflickr.com/65535/51926931594_169e363b48_z.jpg",
+    },
+    {
+        chave: "victor-ferreira",
+        nome: "Victor",
+        sobrenome: "Ferreira",
+        ramal: 4812,
+        email: "victor.ferreira@mhedica.com.br",
+        numero: 31996761564,
+        cargo: "Gerente de Imagem",
+        setor: "Vendas",
+        admissao: "03/10/2022",
+        aniversario: "02/20/1996",
+        foto: "https://live.staticflickr.com/65535/52401801306_4fd2f2ac10_w.jpg",
     },
     {
         chave: "wander",
@@ -662,6 +675,7 @@ export const pessoa = [
         aniversario: "12/26/1962",
         foto: "https://live.staticflickr.com/65535/51926683583_2001aca7ed_z.jpg",
     },
+    
 ]
 
 export const grupos = [
@@ -708,10 +722,10 @@ export const grupos = [
         membros: [" Marcos Oliveira", " Luiz Claudio",  " Eduardo Rangel", " Leandro", " Lucas Henrique"]
     },
     {
-        key: ["aline", "antonio", "brenda", "carlos", "bruno-varandas", "italo", "claudio", "cileia", "douglas", "eduardo-benedicto", "eugenio", "elizangela", "fabio", "fernanda-moreira", "fernanda-rodrigues", "mercia", "glauber", "glauciene", "jacimara", "jane", "juan", "larissa", "leandro", "leticia","lucas-araujo", "marcos-oliveira", "lucas-mendonca", "luana-morelle", "marcos-ferreira", "marcos-faria", "marcus.fantoni", "napoleao", "nayara", "paulo", "poliana", "rafael-sorbello", "rafael-danilo", "rafaela", "ricardo", "rubens", "rudson", "sidney", "silvia", "stefanie", "thais", "victor", "wander","luiz-claudio", "eduardo-rangel", "lucas-henrique"],
+        key: ["aline", "antonio", "brenda", "carlos", "bruno-varandas", "italo", "claudio", "cileia", "douglas", "eduardo-benedicto", "eugenio", "elizangela", "fabio", "fernanda-moreira", "fernanda-rodrigues", "mercia", "glauber", "glauciene", "jacimara", "jane", "juan", "larissa", "leandro", "leticia","lucas-araujo", "marcos-oliveira", "lucas-mendonca", "luana-morelle", "marcos-ferreira", "marcos-faria", "marcus.fantoni", "napoleao", "nayara", "paulo", "poliana", "rafael-sorbello", "rafael-danilo", "rafaela", "ricardo", "rubens", "rudson", "sidney", "silvia", "stefanie", "thais", "victor-hugo", "victor-ferreira","wander","luiz-claudio", "eduardo-rangel", "lucas-henrique"],
         grupo: "Geral",
         email: "geral@mhedica.com.br",
-        membros: [" Aline", " Brenda", " Bruno Varandas", " Carlos", " Claudio", " Cileia", " Douglas", " Eduardo Benedicto", " Eduardo Rangel", " Eugênio", " Elizangela", " Fabio", " Fernanda Moreira", " Fernanda Rodrigues", " Mércia", " Glauber", " Glauciene", " Jacimara", " Jane", " Juan", " Larissa", " Leandro", " Leticia", " Lucas Araújo", "Lucas Mendonça", " Lucas Henrique", " Marcos Oliveira", " Luiz Claudio", " Luana Morelle", " Marcos Ferreira", " Marcos Faria", " Marcus Fantoni", " Napoleão", " Nayara", " Paulo", " Poliana", " Rafael Sorbello", " Rafael Danilo", " Rafaela", " Ricardo", " Rubens", " Rudson", " Sidney", " Silvia", " Stefanie", " Thais", " Victor", " Wander"]
+        membros: [" Aline", " Brenda", " Bruno Varandas", " Carlos", " Claudio", " Cileia", " Douglas", " Eduardo Benedicto", " Eduardo Rangel", " Eugênio", " Elizangela", " Fabio", " Fernanda Moreira", " Fernanda Rodrigues", " Mércia", " Glauber", " Glauciene", " Jacimara", " Jane", " Juan", " Larissa", " Leandro", " Leticia", " Lucas Araújo", "Lucas Mendonça", " Lucas Henrique", " Marcos Oliveira", " Luiz Claudio", " Luana Morelle", " Marcos Ferreira", " Marcos Faria", " Marcus Fantoni", " Napoleão", " Nayara", " Paulo", " Poliana", " Rafael Sorbello", " Rafael Danilo", " Rafaela", " Ricardo", " Rubens", " Rudson", " Sidney", " Silvia", " Stefanie", " Thais", " Victor Hugo", " Victor Ferreira", " Wander"]
     },
     {
         key: ["glauciene", "stefanie", "fernanda-moreira"],
@@ -732,9 +746,9 @@ export const grupos = [
         membros: [" Carlos", " Elizangela", " Napoleão", " Nayara", " Leandro"]
     },
     {
-        key: ["antonio","bruno-varandas", "glauber", "lucas-araujo", "lucas-mendonca", "marcos-faria", "marcus-fantoni", "napoleao", "rafael-sorbello", "ricardo", "sidney", "thais", "wander"],
+        key: ["antonio","bruno-varandas", "glauber", "lucas-araujo", "lucas-mendonca", "marcos-faria", "marcus-fantoni", "napoleao", "rafael-sorbello", "ricardo", "sidney", "thais", "victor-ferreira", "wander"],
         grupo: "Vendas",
         email: "vendas@mhedica.com.br",
-        membros: [" Antônio"," Bruno Varandas", " Glauber", " Lucas Araujo", " Lucas Mendonça", " Marcos Faria", " Marcus Fantoni", " Napoleão", " Rafael Sorbello", " Ricardo", " Sidney", " Thais", " Wander"]
+        membros: [" Antônio"," Bruno Varandas", " Glauber", " Lucas Araujo", " Lucas Mendonça", " Marcos Faria", " Marcus Fantoni", " Napoleão", " Rafael Sorbello", " Ricardo", " Sidney", " Thais", " Victor Ferreira", " Wander"]
     }
 ]
