@@ -72,6 +72,8 @@ export default function Home() {
       pessoa.map((name) => {
           if (name.chave.includes(convertToSlug(textInput))){
               searchResult = name
+          }else{
+            handleError()
           }
       })
 
@@ -83,9 +85,6 @@ export default function Home() {
         }
       })
 
-      if (!searchResult){
-          handleError()
-      }
       return searchResult
   }
 
@@ -105,9 +104,7 @@ export default function Home() {
           <Logo />
         )}
 
-        {error && (
-            <Error />
-        )}
+        
 
         {buttonGroup && (
             <div className="button-spam-container button-spam-align">
@@ -117,14 +114,19 @@ export default function Home() {
         )}
 
         {fieldSearch && (
-          <Search 
-          value={textInput} 
-          onChange={(event) => setTextInput(event.target.value)} 
-          onKeyPress={event => {
-            if (event.key === 'Enter') {
-                handleCard()
-            }}} 
-          onClick={handleCard}/>
+          <><Search 
+            value={textInput} 
+            onChange={(event) => setTextInput(event.target.value)} 
+            onKeyPress={event => {
+              if (event.key === 'Enter') {
+                  handleCard()
+              }}} 
+            onClick={handleCard}/>
+          </>
+        )}
+
+        {error && (
+            <Error />
         )}
 
         {isBirthday && (

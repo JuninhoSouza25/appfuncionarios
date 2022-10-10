@@ -11,6 +11,7 @@
 }
 
 .error-img{
+    scale: .7;
     animation: shake 1.5s;
 }
 
