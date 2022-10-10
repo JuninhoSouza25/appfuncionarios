@@ -218,7 +218,7 @@ export const pessoa = [
         setor: "Comercial",
         admissao: "10/10/2022",
         aniversario: "01/06/1993",
-        foto: "https://www.disklimeira.com.br/uploads/profile_photos/nophoto-female.jpg",
+        foto: "https://live.staticflickr.com/65535/52418790913_1006097d2f_w.jpg",
     },
     {
         chave: "glauber",
