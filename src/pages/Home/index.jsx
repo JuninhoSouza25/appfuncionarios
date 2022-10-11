@@ -14,7 +14,6 @@ export default function Home() {
   const [error, setError] = useState(false);
   const [textInput, setTextInput] = useState('');
   const [card, setCard] = useState(false);
-  const [result, setResult] = useState();
   const [fieldSearch, setFieldSearch] = useState(true);
   const [buttonBack, setButtonBack] = useState(false);
   const [isBirthday, setIsBirthDay] = useState();
@@ -30,9 +29,7 @@ export default function Home() {
       setButtonBack(true);
       setButtonGroup(false);
       handleSearch();
-      setResult(searchResult);
       compareDates(searchResult.aniversario);
-      return result
   }
 
   function handleButtonBack(){
@@ -58,11 +55,10 @@ export default function Home() {
   }
 
   function handleComplete(){
-    setComplete(true)
-    setFieldSearch(false);
+    setComplete(true);
     setButtonBack(true);
     setButtonGroup(false);
-    handleSearch();
+    setFieldSearch(false);
   }
 
   function handleError(){
@@ -112,6 +108,8 @@ export default function Home() {
         .replace(/[\s\W-]+/g, '-') // Replace spaces, non-word characters and dashes with a single dash (-)
   }
 
+  const lista = pessoa.filter((name) => name.chave.includes(convertToSlug(textInput)))
+
   return (
     <div className='home'>
         {logoOn && (
@@ -156,7 +154,9 @@ export default function Home() {
         )}
 
         {card && (
-          <Card result={result} group={group} />
+          lista.map((pessoa) => (
+            <Card key={pessoa.chave} result={pessoa} group={group} />
+          ))
         )}
 
         {grupoOn && (
