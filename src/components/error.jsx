@@ -11,7 +11,10 @@ export default function Error(){
                         Desculpe, não encontrei essa pessoa...
                     </p>
                     <p>
-                        Tente novamente
+                        Tente novamente!
+                    </p>
+                    <p>
+                        Caso tenha mais de uma pessoa com o mesmo nome, tente pelo sobrenome da pessoa buscada.
                     </p>
                 </div>
         </div>

@@ -56,13 +56,13 @@ button:hover, .link-spam:hover {
 }
 
 .button-spam {
+    margin: 0 5px;
     border-radius: 15px;
     transition: ease all 1.5s;
 }
 
 .button-spam-container {
     border-radius: 15px;
-    width: 300px;
     height: 100px;
     display: flex;
     align-items: center;

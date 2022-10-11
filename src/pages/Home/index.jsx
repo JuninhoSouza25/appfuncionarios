@@ -5,7 +5,7 @@ import Logo from '../../components/logo';
 import Search from '../../components/search';
 import LogoMedtech from '../../components/logoMedtech';
 import Error from '../../components/error';
-import { pessoa, grupos } from '../../components/dados';
+import { pessoa, grupos } from '../../dados';
 import Birthday from "../../components/birthday";
 import Card from "../../components/card";
 import Grupos from "../../components/grupos";
@@ -18,10 +18,11 @@ export default function Home() {
   const [fieldSearch, setFieldSearch] = useState(true);
   const [buttonBack, setButtonBack] = useState(false);
   const [isBirthday, setIsBirthDay] = useState();
-  const [group, setGroup] = useState([])
-  const [grupoOn, setGrupoOn] = useState(false)
-  const [buttonGroup, setButtonGroup] = useState(true)
-  const [logoOn, setLogoOn] = useState(true)
+  const [group, setGroup] = useState([]);
+  const [grupoOn, setGrupoOn] = useState(false);
+  const [buttonGroup, setButtonGroup] = useState(true);
+  const [logoOn, setLogoOn] = useState(true);
+  const [complete, setComplete] = useState(false);
 
   function handleCard(){
       setCard(true);
@@ -45,6 +46,7 @@ export default function Home() {
       setGrupoOn(false);
       setGroup([''])
       setLogoOn(true)
+      setComplete(false)
   }
 
   function handleButtonGroup(){
@@ -53,6 +55,14 @@ export default function Home() {
     setButtonBack(true);
     setFieldSearch(false);
     setLogoOn(false)
+  }
+
+  function handleComplete(){
+    setComplete(true)
+    setFieldSearch(false);
+    setButtonBack(true);
+    setButtonGroup(false);
+    handleSearch();
   }
 
   function handleError(){
@@ -73,7 +83,7 @@ export default function Home() {
   
       pessoa.map((name) => {
           if (name.chave.includes(convertToSlug(textInput))){
-              searchResult = name
+            searchResult = name
           }
       })
 
@@ -112,6 +122,7 @@ export default function Home() {
 
         {buttonGroup && (
             <div className="button-spam-container button-spam-align">
+                <button className="button-spam" onClick={handleComplete}>Lista completa</button>
                 <button className="button-spam" onClick={handleButtonGroup}>Grupos de Emails</button>
                 <Link className="button-spam link-spam" to="/chamado">Chamado SAP</Link>
             </div>
@@ -136,6 +147,12 @@ export default function Home() {
 
         {isBirthday && (
           <Birthday />
+        )}
+
+        {complete && (
+          pessoa.map((pessoa) => (
+            <Card key={pessoa.chave} result={pessoa} group={group} />
+          ))
         )}
 
         {card && (
