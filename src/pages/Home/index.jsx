@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import './home.css';
 import Logo from '../../components/logo';
@@ -10,7 +10,7 @@ import Birthday from "../../components/birthday";
 import Card from "../../components/card";
 import Grupos from "../../components/grupos";
 
-export default function Home() {
+export default function Home(){
   const [error, setError] = useState(false);
   const [textInput, setTextInput] = useState('');
   const [card, setCard] = useState(false);
@@ -59,6 +59,8 @@ export default function Home() {
     setButtonBack(true);
     setButtonGroup(false);
     setFieldSearch(false);
+    setLogoOn(false)
+    handleSearch()
   }
 
   function handleError(){
@@ -116,8 +118,6 @@ export default function Home() {
           <Logo />
         )}
 
-        
-
         {buttonGroup && (
             <div className="button-spam-container button-spam-align">
                 <button className="button-spam" onClick={handleComplete}>Lista completa</button>
@@ -148,9 +148,14 @@ export default function Home() {
         )}
 
         {complete && (
-          pessoa.map((pessoa) => (
+          <>
+          <div className="button-spam-container">
+          <button className="button-spam" onClick={handleButtonBack}>Voltar</button>
+          </div>
+          {pessoa.map((pessoa) => (
             <Card key={pessoa.chave} result={pessoa} group={group} />
-          ))
+          ))}
+          </>
         )}
 
         {card && (
