@@ -24,12 +24,17 @@ export default function Home(){
   const [complete, setComplete] = useState(false);
 
   function handleCard(){
-      setCard(true);
+      if(textInput) {
+        setCard(true);
       setFieldSearch(false);
       setButtonBack(true);
       setButtonGroup(false);
       handleSearch();
       compareDates(searchResult.aniversario);
+      setError(false)
+      }else{
+        handleError()
+      }
   }
 
   function handleButtonBack(){
@@ -64,8 +69,8 @@ export default function Home(){
   }
 
   function handleError(){
-      setCard(false);
-      setError(true);
+        setCard(false);
+        setError(true);
   }
 
   function compareDates(date){
