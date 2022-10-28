@@ -102,6 +102,8 @@ export default function Home(){
         }
       })
 
+      console.log("Grupo: " + group)
+
       return searchResult
   }
 
