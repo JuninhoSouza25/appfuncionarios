@@ -1,4 +1,4 @@
-import logo from '../assets/img/logofinal.png';
+import logo from '../../assets/img/logofinal.png';
 
 export default function LogoMhedTech(){
     return(

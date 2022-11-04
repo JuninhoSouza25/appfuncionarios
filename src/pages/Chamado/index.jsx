@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import '../Home/home.css';
 import './chamado.css';
 import Logo from '../../components/logo';
 import LogoMhedTech from '../../components/logoMedtech';
@@ -24,24 +23,30 @@ export default function Chamado(){
     return(
         <div className='home'>
             <Logo />
+            <div className='nav'>
+                <h1>Chamado SAP</h1>
+            </div>
 
-            <h1>Chamado SAP</h1>
 
-            <form onSubmit={handleSubmit} action="https://formsubmit.co/eugenio@mhedica.com.br" method="POST" enctype="multipart/form-data">
-                <input type="hidden" name="_template" value="box"/>
-                <input type="hidden" name="_subject" value={'Chamado SAP ' + formValues.nome + ' - ' + formValues.assunto}/>
-                <input type="hidden" name="_captcha" value="false"/>
-                <label>Digite seu nome</label>
-                <input className='input-form' text='text' name='nome' onChange={handleInputChange} value={formValues.nome || '' }></input>
-                <label>Digite o Assunto do Chamado</label>
-                <input className='input-form' text='text' name='assunto' onChange={handleInputChange} value={formValues.assunto || '' }></input>
-                <label>Descreva o problema:</label>
-                <textarea className='input-form' text='textarea' name='descricao' onChange={handleInputChange} value={formValues.descricao || ''}></textarea>
-                <label id='input-form-button'>Anexar um arquivo
-                <input  type="file" name="attachment" accept="image/png, image/jpeg, image/pdf"></input></label>
-                <button className='button-spam' type='submit'>Enviar</button>
-                <Link className="button-spam link-spam" to="/">Inicio</Link>
-            </form>
+            <div className='form-container'>
+                <form onSubmit={handleSubmit} action="https://formsubmit.co/eugenio@mhedica.com.br" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_template" value="box"/>
+                    <input type="hidden" name="_subject" value={'Chamado SAP ' + formValues.nome + ' - ' + formValues.assunto}/>
+                    <input type="hidden" name="_captcha" value="false"/>
+                    <label>Digite seu nome</label>
+                    <input className='input-form' text='text' name='nome' onChange={handleInputChange} value={formValues.nome || '' }></input>
+                    <label>Digite o Assunto do Chamado</label>
+                    <input className='input-form' text='text' name='assunto' onChange={handleInputChange} value={formValues.assunto || '' }></input>
+                    <label>Descreva o problema:</label>
+                    <textarea className='input-form' text='textarea' name='descricao' onChange={handleInputChange} value={formValues.descricao || ''}></textarea>
+                    <label id='input-form-button'>Anexar um arquivo
+                    <input  type="file" name="attachment" accept="image/png, image/jpeg, image/pdf"></input></label>
+                    <button className='button-spam' type='submit'>Enviar</button>
+                    <Link className="button-spam link-spam" to="/">Inicio</Link>
+                </form>
+            </div>
+
+            
 
             <LogoMhedTech />
         </div>

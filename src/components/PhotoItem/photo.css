@@ -1,0 +1,53 @@
+.photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px rgba(77, 77, 77, 0.3);
+    transition: all ease 1s;
+}
+
+.small {
+    height: 400px;
+}
+
+.big {
+    height: 900px;
+}
+
+.photo {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: all ease .6s;
+    cursor: pointer;
+    border-radius: 15px;
+    scale: .95;
+}
+
+.photo:hover {
+    filter: grayscale(0);
+    scale: .99;
+}
+
+#text {
+    position: absolute;
+    margin-top: 340px;
+    color: #fff;
+    justify-self: flex-end;
+    opacity: .8;
+}
+
+
+@media screen and (max-width: 440px){
+    .photo-container {
+        height: auto;
+    }
+
+    .photo {
+        width: 100%;
+    }
+}

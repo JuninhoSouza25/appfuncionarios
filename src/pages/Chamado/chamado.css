@@ -6,6 +6,11 @@ form {
     transition: all ease 1.5s;
     animation: slideY 1.5s;
 }
+
+.form-container {
+    height: 52vh;
+}
+
 .input-form {
     border: 1px solid #1C88C8;
     border-radius: 15px;

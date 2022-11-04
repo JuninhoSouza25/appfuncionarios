@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import './home.css';
 import Logo from '../../components/logo';
@@ -22,6 +22,7 @@ export default function Home(){
   const [buttonGroup, setButtonGroup] = useState(true);
   const [logoOn, setLogoOn] = useState(true);
   const [complete, setComplete] = useState(false);
+
 
   function handleCard(){
       if(textInput) {
@@ -56,7 +57,7 @@ export default function Home(){
     setGrupoOn(true);
     setButtonBack(true);
     setFieldSearch(false);
-    setLogoOn(false)
+    setLogoOn(true)
   }
 
   function handleComplete(){
@@ -64,7 +65,7 @@ export default function Home(){
     setButtonBack(true);
     setButtonGroup(false);
     setFieldSearch(false);
-    setLogoOn(false)
+    setLogoOn(true)
     handleSearch()
   }
 
@@ -102,8 +103,6 @@ export default function Home(){
         }
       })
 
-      console.log("Grupo: " + group)
-
       return searchResult
   }
 
@@ -127,8 +126,10 @@ export default function Home(){
 
         {buttonGroup && (
             <div className="button-spam-container button-spam-align">
+                <Link className="button-spam link-spam" to="/">Início</Link>
                 <button className="button-spam" onClick={handleComplete}>Lista completa</button>
                 <button className="button-spam" onClick={handleButtonGroup}>Grupos de Emails</button>
+                <Link className="button-spam link-spam" to="/galeria">Galeria de Fotos</Link>
                 <Link className="button-spam link-spam" to="/chamado">Chamado SAP</Link>
             </div>
         )}
@@ -145,7 +146,7 @@ export default function Home(){
               onClick={handleCard}/>
           </>
         )}
-
+        
         {error && (
             <Error />
         )}

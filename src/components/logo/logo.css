@@ -2,12 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 150px;
 }
 
 img {
     width: 20vw;
-    margin-top: 20%;
 }
 
 @media screen and (max-width: 844px){

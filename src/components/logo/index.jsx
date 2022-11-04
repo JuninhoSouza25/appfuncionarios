@@ -1,4 +1,4 @@
-import logo from '../assets/img/logomhedica.png';
+import logo from '../../assets/img/logomhedica.png';
 import './logo.css'
 
 export default function Logo(){
