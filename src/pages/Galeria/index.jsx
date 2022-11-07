@@ -25,8 +25,6 @@ export default function Galeria(){
     }, [])
 
     function handleGallery(e){
-        
-        console.log(e.target.id)
         if (e.target.id === "halloween21"){
             setPhotoGallery(photos21)
         }else if (e.target.id === "halloween22"){

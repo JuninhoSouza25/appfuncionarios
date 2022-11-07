@@ -1,7 +1,6 @@
 import { storage } from '../libs/firebase';
 import { ref, listAll, getDownloadURL} from 'firebase/storage';
 
-
 export const getAllHalloween22 = async () => {
     let list = [];
 
@@ -16,7 +15,6 @@ export const getAllHalloween22 = async () => {
             url: photoUrl
         })
     }
-
 
     return list
 }
@@ -35,7 +33,6 @@ export const getAllHalloween21 = async () => {
             url: photoUrl
         })
     }
-
 
     return list
 }
