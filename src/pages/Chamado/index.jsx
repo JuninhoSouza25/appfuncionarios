@@ -25,6 +25,11 @@ export default function Chamado(){
             <Logo />
             <div className='nav'>
                 <h1>Chamado SAP</h1>
+                <div className="button-spam-container button-spam-align">
+                    <Link className="button-spam link-spam" to="/">Início</Link>
+                    <Link className="button-spam link-spam" to="/galeria">Galeria de Fotos</Link>
+                    <Link className="button-spam link-spam" to="/chamado">Chamado SAP</Link>
+                </div>
             </div>
 
 

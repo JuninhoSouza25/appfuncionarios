@@ -19,7 +19,7 @@ export default function Home(){
   const [isBirthday, setIsBirthDay] = useState();
   const [group, setGroup] = useState([]);
   const [grupoOn, setGrupoOn] = useState(false);
-  const [buttonGroup, setButtonGroup] = useState(true);
+  const [menu, setMenu] = useState(true);
   const [logoOn, setLogoOn] = useState(true);
   const [complete, setComplete] = useState(false);
 
@@ -29,7 +29,7 @@ export default function Home(){
         setCard(true);
       setFieldSearch(false);
       setButtonBack(true);
-      setButtonGroup(false);
+      setMenu(false);
       handleSearch();
       compareDates(searchResult.aniversario);
       setError(false)
@@ -45,25 +45,26 @@ export default function Home(){
       setError(false);
       setTextInput('');
       setIsBirthDay(false);
-      setButtonGroup(true);
+      setMenu(true);
       setGrupoOn(false);
       setGroup([''])
       setLogoOn(true)
       setComplete(false)
   }
 
-  function handleButtonGroup(){
-    setButtonGroup(false);
+  function handleMenu(){
+    setMenu(false);
     setGrupoOn(true);
     setButtonBack(true);
     setFieldSearch(false);
-    setLogoOn(true)
+    setLogoOn(true);
+    setComplete(false)
   }
 
   function handleComplete(){
     setComplete(true);
     setButtonBack(true);
-    setButtonGroup(false);
+    setMenu(false);
     setFieldSearch(false);
     setLogoOn(true)
     handleSearch()
@@ -124,11 +125,11 @@ export default function Home(){
           <Logo />
         )}
 
-        {buttonGroup && (
+        {menu && (
             <div className="button-spam-container button-spam-align">
                 <Link className="button-spam link-spam" to="/">Início</Link>
                 <button className="button-spam" onClick={handleComplete}>Lista completa</button>
-                <button className="button-spam" onClick={handleButtonGroup}>Grupos de Emails</button>
+                <button className="button-spam" onClick={handleMenu}>Grupos de Emails</button>
                 <Link className="button-spam link-spam" to="/galeria">Galeria de Fotos</Link>
                 <Link className="button-spam link-spam" to="/chamado">Chamado SAP</Link>
             </div>
@@ -158,7 +159,7 @@ export default function Home(){
         {complete && (
           <>
           <div className="button-spam-container">
-          <button className="button-spam" onClick={handleButtonBack}>Voltar</button>
+              <button className="button-spam" onClick={handleButtonBack}>Início</button>
           </div>
           {pessoa.map((pessoa) => (
             <Card key={pessoa.chave} result={pessoa} group={group} />
@@ -173,7 +174,12 @@ export default function Home(){
         )}
 
         {grupoOn && (
-          <Grupos grupos={grupos} />
+          <>
+            <div className="button-spam-container">
+              <button className="button-spam" onClick={handleButtonBack}>Início</button>
+            </div>
+            <Grupos grupos={grupos} />
+          </>
         )}
 
         {buttonBack && (

@@ -733,6 +733,12 @@ export const grupos = [
         membros: [" Carlos", " Elizangela", " Gabriella", " Napoleão", " Nayara"]
     },
     {
+        key:["aline", "marcos-oliveira", "lucas-henrique", "eduardo-rangel", "luiz-claudio", "leticia", "glauciene", "stefanie", "fernanda-moreira", "silvia", "nayara", "mercia", "rafael-danilo"],
+        grupo: "Recebimento NFe",
+        email: "recebimentonfe@mhedica.com.br",
+        membros: [" Aline", " Marcos Oliveira", " Lucas Henrique", " Eduardo Rangel", " Luiz Claudio", " Letícia", " Glauciene", " Stefanie", " Fernanda Moreira", " Silvia", " Nayara", " Mércia", " Rafael Danilo"]
+    },
+    {
         key: ["antonio","bruno-varandas", "glauber", "lucas-araujo", "lucas-mendonca", "marcos-faria", "marcus-fantoni", "napoleao", "rafael-sorbello", "ricardo", "sidney", "thais", "victor-ferreira", "wander"],
         grupo: "Vendas",
         email: "vendas@mhedica.com.br",
