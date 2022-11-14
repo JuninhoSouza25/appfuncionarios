@@ -47,7 +47,6 @@ export default function Galeria(){
                 <h1>Galeria de fotos</h1>
                 <div className="button-spam-container button-spam-align">
                     <Link className="button-spam link-spam" to="/">Início</Link>
-                    <Link className="button-spam link-spam" to="/galeria">Galeria de Fotos</Link>
                     <Link className="button-spam link-spam" to="/chamado">Chamado SAP</Link>
                     { galleryOn && <button className="button-spam link-spam" onClick={handleGallery}>Galeria de fotos</button> }
                 </div>
