@@ -38,7 +38,7 @@ export default function Chamado(){
                     <input type="hidden" name="_template" value="box"/>
                     <input type="hidden" name="_subject" value={'Chamado SAP ' + formValues.nome + ' - ' + formValues.assunto}/>
                     <input type="hidden" name="_captcha" value="false"/>
-                    <label>Digite seu nome</label>
+                    <label>Digite seu nome:</label>
                     <input className='input-form' text='text' name='nome' onChange={handleInputChange} value={formValues.nome || '' }></input>
                     <label>Digite o Assunto do Chamado</label>
                     <input className='input-form' text='text' name='assunto' onChange={handleInputChange} value={formValues.assunto || '' }></input>
