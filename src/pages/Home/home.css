@@ -107,6 +107,7 @@ button:hover, .link-spam:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 15px;
 }
 
 @keyframes slideY{
@@ -126,12 +127,13 @@ button:hover, .link-spam:hover {
 }
 
 .container-funcionario {
-    width: 57%;
+    width: 50%;
 }
 
 .img-individuo {
-    width: auto;
     height: 100%;
+    width: 100%;
+    object-fit: cover;
     margin: 0;
     border-radius: 15px 0 0 15px;
 }
