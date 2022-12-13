@@ -4,9 +4,8 @@ import Logo from '../../components/logo';
 import LogoMhedTech from '../../components/logoMedtech';
 import { Link } from 'react-router-dom';
 
-
-
 export default function Chamado(){
+    
     const [ formValues, setFormValues] = useState({});
 
     const handleInputChange = (e) => {
@@ -24,14 +23,13 @@ export default function Chamado(){
         <div className='home'>
             <Logo />
             <div className='nav'>
-                <h1>Chamado SAP</h1>
                 <div className="button-spam-container button-spam-align">
                     <Link className="button-spam link-spam" to="/">Início</Link>
                     <Link className="button-spam link-spam" to="/galeria">Galeria de Fotos</Link>
                     <Link className="button-spam link-spam" to="/chamado">Chamado SAP</Link>
                 </div>
+                <h1>Chamado SAP</h1>
             </div>
-
 
             <div className='form-container'>
                 <form onSubmit={handleSubmit} action="https://formsubmit.co/eugenio@mhedica.com.br" method="POST" encType="multipart/form-data">
@@ -50,8 +48,6 @@ export default function Chamado(){
                     <Link className="button-spam link-spam" to="/">Inicio</Link>
                 </form>
             </div>
-
-            
 
             <LogoMhedTech />
         </div>
