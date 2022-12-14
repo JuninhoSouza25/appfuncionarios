@@ -43,7 +43,7 @@ export default function Chamado(){
                     <label>Descreva o problema:</label>
                     <textarea className='input-form' text='textarea' name='descricao' onChange={handleInputChange} value={formValues.descricao || ''}></textarea>
                     <label id='input-form-button'>Anexar um arquivo
-                    <input  type="file" name="attachment" accept="image/png, image/jpeg, image/pdf"></input></label>
+                    <input  type="file" name="attachment" accept="image/png, image/jpeg, image/pdf" multiple="multiple"></input></label>
                     <button className='button-spam' type='submit'>Enviar</button>
                     <Link className="button-spam link-spam" to="/">Inicio</Link>
                 </form>
