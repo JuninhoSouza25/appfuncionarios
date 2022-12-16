@@ -39,3 +39,7 @@ label {
     border: 1px solid #c81c1c;
     color: #c81c1c;
 }
+
+.input-attachment-wrapper input[type="file"] {
+    display: flex;
+}

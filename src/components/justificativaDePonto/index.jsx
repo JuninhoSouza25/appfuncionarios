@@ -21,12 +21,15 @@ export default function JustificativaDePonto(){
     async function onSubmit(data){  
         let config = {
             method: 'post',
+            enctype:'multipart/form-data',
             url: 'http://localhost:3001/api/justificativa-ponto',
             headers: {
                 'Content-Type': 'application/json',
             },
             data: data,
         };
+
+        console.log(data)
 
         try {
             const response = await axios(config);
@@ -184,13 +187,6 @@ export default function JustificativaDePonto(){
                         </input>
                     </label>
                 )}
-
-                <div>
-                    <label>Anexar</label>
-                    <input 
-                    type="file"
-                    {...register("attachment")}></input>
-                </div>
 
                 {sucessField && (
                     <>
