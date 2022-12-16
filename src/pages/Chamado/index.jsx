@@ -1,11 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
 import './chamado.css';
 import Logo from '../../components/logo';
 import LogoMhedTech from '../../components/logoMedtech';
 import { Link } from 'react-router-dom';
 
 export default function Chamado(){
-    
     const [ formValues, setFormValues] = useState({});
 
     const handleInputChange = (e) => {
@@ -17,6 +16,13 @@ export default function Chamado(){
         const formData = new FormData(event.target)
         const data = Object.fromEntries(formData)
         console.log(data)
+    }
+
+    function Attachment(){
+        return(
+            <label id='input-form-button'>Anexar um arquivo
+            <input  type="file" name="attachment" accept="image/png, image/jpeg, image/pdf" multiple="multiple" ></input></label>
+        )
     }
 
     return(
@@ -42,8 +48,9 @@ export default function Chamado(){
                     <input className='input-form' text='text' name='assunto' onChange={handleInputChange} value={formValues.assunto || '' }></input>
                     <label>Descreva o problema:</label>
                     <textarea className='input-form' text='textarea' name='descricao' onChange={handleInputChange} value={formValues.descricao || ''}></textarea>
-                    <label id='input-form-button'>Anexar um arquivo
-                    <input  type="file" name="attachment" accept="image/png, image/jpeg, image/pdf" multiple="multiple"></input></label>
+
+                    <Attachment/>
+
                     <button className='button-spam' type='submit'>Enviar</button>
                     <Link className="button-spam link-spam" to="/">Inicio</Link>
                 </form>

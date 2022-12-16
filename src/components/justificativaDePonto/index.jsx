@@ -1,29 +1,44 @@
 import React, {useState} from 'react'
+import { useForm } from 'react-hook-form'
+import axios from 'axios'
 import './styles.css'
+import { Link } from 'react-router-dom'
 
 export default function JustificativaDePonto(){
-    const [ formValues, setFormValues] = useState({});
-    const [ qual, setQual ] = useState(false)
+    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm()
+    const [ selectField, setSelectField ] = useState(false)
+    const [ sucessField, setSucessField ] = useState(false)
 
-    const handleInputChange = (e) => {
-        const {name, value} = e.target;
-        setFormValues({...formValues, [name]: value })
-    }
-
-    const handleSubmit = (event) => {
-        const formData = new FormData(event.target)
-        const data = Object.fromEntries(formData)
-        console.log(data)
-    }
-
-    function handleQual(event){
-        const outros = event.target.getAttribute('name')
-        if( outros === "justificativa" && event.target.value === "Outros"){
-            setQual(true)
+    function handleSelectField(event){
+        const selectField = event.target
+        if( selectField.name === "selectJustify" && selectField.value === "Outros"){
+            setSelectField(true)
         }else{
-            setQual(false)
+            setSelectField(false)
         }
     }
+
+    async function onSubmit(data){  
+        let config = {
+            method: 'post',
+            url: 'http://localhost:3001/api/justificativa-ponto',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            data: data,
+        };
+
+        try {
+            const response = await axios(config);
+            if(response.status === 200){
+                setSucessField(true)
+                reset()
+                console.log("sucesso")
+            }
+        } catch (err) {
+            console.error(err)
+        }
+    };
     
     return(
         <>
@@ -33,19 +48,22 @@ export default function JustificativaDePonto(){
                 <p>Versão: 1.0</p>
             </div>
 
-            <form onSubmit={handleSubmit} action="https://formsubmit.co/eugenio@mhedica.com.br" method="POST" encType="multipart/form-data">
-
-                <input type="hidden" name="_template" value="box"/>
-                <input type="hidden" name="_subject" value={`Solicitação de compensação/descanso de Banco de Horas - ${formValues.nome}`}/>
-                <input type="hidden" name="_captcha" value="false"/>
-
+            <div>
                 <div className='form-cabecalho'>
 
                     <label>Nome:
-                        <input className='input-form' type='text' name='nome' onChange={handleInputChange} value={formValues.nome || '' }></input>
+                        <input 
+                            className={`input-form ${errors?.name && 'required'}` } 
+                            type='text' {...register("name", {required: true})} 
+                            placeholder={errors?.name ? `Campo obrigatório!` : ''}>
+                        </input>
                     </label>
                     <label>Cargo:
-                        <input className='input-form' type='text' name='cargo' onChange={handleInputChange} value={formValues.cargo || '' }></input>
+                        <input 
+                            className={`input-form ${errors?.office && 'required'}` }
+                            type='text' {...register("office", {required: true})} 
+                            placeholder={errors?.office ? `Campo obrigatório!` : ''}>
+                        </input>
                     </label>
 
                 </div>
@@ -53,69 +71,142 @@ export default function JustificativaDePonto(){
                 <div className='form-cabecalho'>
 
                     <label>Setor:
-                        <input className='input-form' type='text' name='setor' onChange={handleInputChange} value={formValues.setor || '' }></input>
+                        <input 
+                            className={`input-form ${errors?.sector && 'required'}` } 
+                            type='text' {...register("sector", {required: true})}
+                            placeholder={errors?.sector ? `Campo obrigatório!` : ''}>
+                        </input>
                     </label>
                     <label>Gestor Responsável:
-                        <input className='input-form' type='text' name='gestor' onChange={handleInputChange} value={formValues.gestor || '' }></input>
+                        <input 
+                            className={`input-form ${errors?.manager && 'required'}` } 
+                            type='text' {...register("manager", {required: true})}
+                            placeholder={errors?.manager ? `Campo obrigatório!` : ''}>
+                        </input>
                     </label>
 
                 </div>
 
                 <label>Data da Ocorrência:
-                    <input className='input-form' type="date" name='dataInicio' onChange={handleInputChange}  value={formValues.dataInicio || '' }/>
+                    <input 
+                        className={`input-form ${errors?.date && 'required'}` } 
+                        type="date" {...register("date", {required: true})}
+                        placeholder={errors?.date ? `Campo obrigatório!` : ''}/>
                 </label>
 
                 <div className='form-cabecalho'>
                     <label>Entrada
-                        <input className='input-form' type="checkbox" id='entrada' name='entrada'></input>
+                        <input 
+                            className='input-form' 
+                            type="checkbox" {...register("ingress")}>
+                        </input>
                     </label>
                     <label>Horário
-                        <input className='input-form' type='time' id='dataEntrada' name='dataEntrada'></input>
+                        <input 
+                            className='input-form' 
+                            type='time' {...register("ingressTime")}>
+                        </input>
                     </label>
                 </div>
                 <div className='form-cabecalho'>
                     <label>Intervalo
-                        <input className='input-form' type="checkbox" id='intervalo' name='intervalo'></input>
+                        <input 
+                            className='input-form' 
+                            type="checkbox" {...register("breakTimeStart")}>
+                        </input>
                     </label>
                     <label>Horário
-                        <input className='input-form' type='time' id='dataIntervalo' name='dataIntervalo'></input>
+                        <input 
+                            className='input-form' 
+                            type='time'{...register("breakTimeStartHour")}>
+                        </input>
                     </label>
                 </div>
                 <div className='form-cabecalho'>
                     <label>Retorno do Intervalo
-                        <input className='input-form' type="checkbox" id='retorno' name='retorno'></input>
+                        <input 
+                            className='input-form' 
+                            type="checkbox" {...register("breakTimeEnd")}>
+                        </input>
                     </label>
                     <label>Horário
-                        <input className='input-form' type='time' id='dataRetorno' name='dataRetorno'></input>
+                        <input 
+                            className='input-form' 
+                            type='time' {...register("breakTimeEndHour")}>
+                        </input>
                     </label>
                 </div>
                 <div className='form-cabecalho'>
                     <label>Saída
-                        <input className='input-form' type="checkbox" id='saida' name='saida'></input>
+                        <input 
+                            className='input-form' 
+                            type="checkbox" {...register("exit")}>
+                        </input>
                     </label>
                     <label>Horário
-                        <input className='input-form' type='time' id='dataSaida' name='dataSaida'></input>
+                        <input 
+                            className='input-form' 
+                            type='time' {...register("exitTime")}>
+                        </input>
                     </label>
                 </div>
 
                 <div>
                     <label>Justificativa</label>
-                    <select className='input-form' name='justificativa' id='justificativa'  onChange={handleQual} >
-                        <option className='input-form' value='Esquecimento'>Esquecimento</option>
-                        <option className='input-form' value='Inconstância no Aplicativo'>Inconstância no Aplicativo</option>
-                        <option className='input-form' value='Serviços externos autorizado pelo gestor'>Serviços externos autorizado pelo gestor</option>
-                        <option className='input-form' value='Outros' >Outros</option>
+                    <select 
+                        className={`input-form ${errors?.selectJustify && 'required'}` } {...register("selectJustify", {required: true})}  
+                        onChange={handleSelectField} >
+                            <option 
+                                className='input-form' 
+                                value={null}>
+                            </option>
+                            <option 
+                                className='input-form' 
+                                value='Esquecimento'>Esquecimento</option>
+                            <option 
+                                className='input-form' 
+                                value='Inconstância no Aplicativo'>Inconstância no Aplicativo</option>
+                            <option 
+                                className='input-form' 
+                                value='Serviços externos autorizado pelo gestor'>Serviços externos autorizado pelo gestor</option>
+                            <option 
+                                className='input-form' 
+                                value='Outros' >Outros</option>
                     </select>
                 </div>
 
-                {qual && (
+                {selectField && (
                     <label>Se "Outros", qual?
-                        <input className='input-form' type='text'></input>
+                        <input 
+                            className='input-form' 
+                            type='text' 
+                            {...register("justifyOthers")}>
+                        </input>
                     </label>
                 )}
 
-                <button className='button-spam' type='submit'>Enviar</button>
-            </form>
+                <div>
+                    <label>Anexar</label>
+                    <input 
+                    type="file"
+                    {...register("attachment")}></input>
+                </div>
+
+                {sucessField && (
+                    <>
+                        <h1>Email enviado com sucesso!</h1>
+                        <Link className='button-spam link-spam' to={'/'}>Inicio</Link>
+                    </>
+                )}
+
+                {!sucessField && (
+                    <button 
+                        onClick={() => handleSubmit(onSubmit)()} 
+                        className='button-spam' 
+                        type='submit' >Enviar
+                    </button>
+                )}
+            </div>
         </>
     )
 }

@@ -34,3 +34,8 @@ label {
     text-align: center;
     font-weight: bold;
 }
+
+.required {
+    border: 1px solid #c81c1c;
+    color: #c81c1c;
+}
