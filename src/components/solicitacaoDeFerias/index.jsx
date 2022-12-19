@@ -2,10 +2,12 @@ import React, {useState} from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import './styles.css'
+import Loading from '../Loading'
 
 export default function SolicitacaoDeFerias(){
-    const { register, handleSubmit, watch, formState: { errors } } = useForm()
+    const { register, handleSubmit, formState: { errors } } = useForm()
     const [ sucessField, setSucessField ] = useState(false);
+    const [ isLoading, setIsLoading ] = useState(false);
 
     async function onSubmit(data){  
         let config = {
@@ -18,7 +20,7 @@ export default function SolicitacaoDeFerias(){
             data: data,
         };
 
-        console.log(data)
+        setIsLoading(true)
 
         try {
             const response = await axios(config);
@@ -107,7 +109,11 @@ export default function SolicitacaoDeFerias(){
                     </label>
                 </div>
 
-                
+                {isLoading && !sucessField ? (
+                    <div className='form-inline'>
+                        <Loading /> Enviando email...
+                    </div>
+                ) : null}      
 
                 {sucessField && (<h3 className='sucess'>Email enviado com sucesso!</h3>)}
 
