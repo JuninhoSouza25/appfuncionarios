@@ -21,7 +21,7 @@ export default function JustificativaDePonto(){
         let config = {
             method: 'post',
             enctype:'multipart/form-data',
-            url: `${import.meta.env.VITE_URL}/api/justificativa-ponto`,
+            url: `https://api-mhedica-funcionarios.vercel.app/api/justificativa-ponto`,
             headers: {
                 'Content-Type': 'application/json',
             },

@@ -11,7 +11,7 @@ export default function SolicitacaoDeFerias(){
         let config = {
             method: 'post',
             enctype:'multipart/form-data',
-            url: `${import.meta.env.VITE_URL}/api/solicitacao-de-ferias`,
+            url: `https://api-mhedica-funcionarios.vercel.app/api/solicitacao-de-ferias`,
             headers: {
                 'Content-Type': 'application/json',
             },
