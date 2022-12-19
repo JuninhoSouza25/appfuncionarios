@@ -2,12 +2,11 @@ import React, {useState} from 'react'
 import { useForm } from 'react-hook-form'
 import axios from 'axios'
 import './styles.css'
-import { Link } from 'react-router-dom'
 
 export default function JustificativaDePonto(){
-    const { register, handleSubmit, watch, reset, formState: { errors } } = useForm()
-    const [ selectField, setSelectField ] = useState(false)
-    const [ sucessField, setSucessField ] = useState(false)
+    const { register, handleSubmit, watch, formState: { errors } } = useForm()
+    const [ selectField, setSelectField ] = useState(false);
+    const [ sucessField, setSucessField ] = useState(false);
 
     function handleSelectField(event){
         const selectField = event.target
@@ -22,7 +21,7 @@ export default function JustificativaDePonto(){
         let config = {
             method: 'post',
             enctype:'multipart/form-data',
-            url: 'http://localhost:3001/api/justificativa-ponto',
+            url: `${import.meta.env.VITE_URL}/api/justificativa-ponto`,
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -35,55 +34,60 @@ export default function JustificativaDePonto(){
             const response = await axios(config);
             if(response.status === 200){
                 setSucessField(true)
-                reset()
                 console.log("sucesso")
+                window.location.reload(false)
             }
         } catch (err) {
             console.error(err)
         }
     };
+
     
     return(
         <>
             <div className='cabecalho'>
-                <h2>Solicitação de compensação/descanso de Banco de Horas</h2>
+                <h2>Justificativa para Ocorrência de Registro de Ponto</h2>
                 <p>RQ-016-IX</p>
                 <p>Versão: 1.0</p>
             </div>
 
             <div>
-                <div className='form-cabecalho'>
+                <div className='form-inline'>
 
                     <label>Nome:
                         <input 
                             className={`input-form ${errors?.name && 'required'}` } 
-                            type='text' {...register("name", {required: true})} 
+                            type='text' 
+                            {...register("name", {required: true})} 
                             placeholder={errors?.name ? `Campo obrigatório!` : ''}>
                         </input>
                     </label>
                     <label>Cargo:
                         <input 
                             className={`input-form ${errors?.office && 'required'}` }
-                            type='text' {...register("office", {required: true})} 
+                            type='text' 
+                            {...register("office", {required: true})} 
                             placeholder={errors?.office ? `Campo obrigatório!` : ''}>
                         </input>
                     </label>
 
                 </div>
 
-                <div className='form-cabecalho'>
+                <div className='form-inline'>
 
                     <label>Setor:
                         <input 
                             className={`input-form ${errors?.sector && 'required'}` } 
-                            type='text' {...register("sector", {required: true})}
+                            type='text' 
+                            {...register("sector", {required: true})}
                             placeholder={errors?.sector ? `Campo obrigatório!` : ''}>
                         </input>
                     </label>
                     <label>Gestor Responsável:
                         <input 
                             className={`input-form ${errors?.manager && 'required'}` } 
-                            type='text' {...register("manager", {required: true})}
+                            type='text' 
+                            {...register("manager", {required: true})}
                             placeholder={errors?.manager ? `Campo obrigatório!` : ''}>
                         </input>
                     </label>
@@ -93,63 +97,72 @@ export default function JustificativaDePonto(){
                 <label>Data da Ocorrência:
                     <input 
                         className={`input-form ${errors?.date && 'required'}` } 
-                        type="date" {...register("date", {required: true})}
+                        type="date" 
+                        {...register("date", {required: true})}
                         placeholder={errors?.date ? `Campo obrigatório!` : ''}/>
                 </label>
 
-                <div className='form-cabecalho'>
+                <div className='form-inline'>
                     <label>Entrada
                         <input 
                             className='input-form' 
-                            type="checkbox" {...register("ingress")}>
+                            type="checkbox" 
+                            {...register("ingress")}>
                         </input>
                     </label>
                     <label>Horário
                         <input 
                             className='input-form' 
-                            type='time' {...register("ingressTime")}>
+                            type='time' 
+                            {...register("ingressTime")}>
                         </input>
                     </label>
                 </div>
-                <div className='form-cabecalho'>
+                <div className='form-inline'>
                     <label>Intervalo
                         <input 
                             className='input-form' 
-                            type="checkbox" {...register("breakTimeStart")}>
+                            type="checkbox" 
+                            {...register("breakTimeStart")}>
                         </input>
                     </label>
                     <label>Horário
                         <input 
                             className='input-form' 
-                            type='time'{...register("breakTimeStartHour")}>
+                            type='time'
+                            {...register("breakTimeStartHour")}>
                         </input>
                     </label>
                 </div>
-                <div className='form-cabecalho'>
+                <div className='form-inline'>
                     <label>Retorno do Intervalo
                         <input 
                             className='input-form' 
-                            type="checkbox" {...register("breakTimeEnd")}>
+                            type="checkbox" 
+                            {...register("breakTimeEnd")}>
                         </input>
                     </label>
                     <label>Horário
                         <input 
                             className='input-form' 
-                            type='time' {...register("breakTimeEndHour")}>
+                            type='time' 
+                            {...register("breakTimeEndHour")}>
                         </input>
                     </label>
                 </div>
-                <div className='form-cabecalho'>
+                <div className='form-inline'>
                     <label>Saída
                         <input 
                             className='input-form' 
-                            type="checkbox" {...register("exit")}>
+                            type="checkbox" 
+                            {...register("exit")}>
                         </input>
                     </label>
                     <label>Horário
                         <input 
                             className='input-form' 
-                            type='time' {...register("exitTime")}>
+                            type='time' 
+                            {...register("exitTime")}>
                         </input>
                     </label>
                 </div>
@@ -157,7 +170,8 @@ export default function JustificativaDePonto(){
                 <div>
                     <label>Justificativa</label>
                     <select 
-                        className={`input-form ${errors?.selectJustify && 'required'}` } {...register("selectJustify", {required: true})}  
+                        className={`input-form ${errors?.selectJustify && 'required'}` } 
+                        {...register("selectJustify", {required: true})}  
                         onChange={handleSelectField} >
                             <option 
                                 className='input-form' 
@@ -188,12 +202,7 @@ export default function JustificativaDePonto(){
                     </label>
                 )}
 
-                {sucessField && (
-                    <>
-                        <h1>Email enviado com sucesso!</h1>
-                        <Link className='button-spam link-spam' to={'/'}>Inicio</Link>
-                    </>
-                )}
+                {sucessField && (<h3 className='sucess'>Email enviado com sucesso!</h3>)}
 
                 {!sucessField && (
                     <button 
