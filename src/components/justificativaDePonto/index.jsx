@@ -4,6 +4,7 @@ import './styles.css'
 import '../../pages/Home/home.css'
 import Loading from '../Loading'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 export default function JustificativaDePonto(){
     const { register, handleSubmit, watch, formState: { errors } } = useForm()
