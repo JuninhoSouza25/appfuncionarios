@@ -49,6 +49,19 @@ label {
     margin: 15px 0;
 }
 
+.form-inline-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+#periodo {
+    width: 90px;
+    margin: 15px 0;
+}
+
 @media screen and (max-width: 440px) {
     .cabecalho {
         width: 100%;

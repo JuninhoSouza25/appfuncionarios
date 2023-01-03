@@ -39,6 +39,8 @@ export default function SolicitacaoDeFerias(){
         <>
             <div className='cabecalho'>
                 <h2>Solicitação de Férias</h2>
+                <p>RQ-016-II</p>
+                <p>Versão: 1.0</p>
             </div>
 
             <div className='form-wrapper'>
@@ -52,6 +54,19 @@ export default function SolicitacaoDeFerias(){
                             placeholder={errors?.name ? `Campo obrigatório!` : ''}>
                         </input>
                     </label>
+                    <label>Email:
+                        <input 
+                            className={`input-form ${errors?.email && 'required'}` } 
+                            type='email' 
+                            {...register("email", {required: true})} 
+                            placeholder={errors?.email ? `Campo obrigatório!` : ''}>
+                        </input>
+                    </label>
+
+                </div>
+
+                <div className='form-inline'>
+
                     <label>Cargo:
                         <input 
                             className={`input-form ${errors?.office && 'required'}` }
@@ -61,10 +76,6 @@ export default function SolicitacaoDeFerias(){
                         </input>
                     </label>
 
-                </div>
-
-                <div className='form-inline'>
-
                     <label>Setor:
                         <input 
                             className={`input-form ${errors?.sector && 'required'}` } 
@@ -73,6 +84,7 @@ export default function SolicitacaoDeFerias(){
                             placeholder={errors?.sector ? `Campo obrigatório!` : ''}>
                         </input>
                     </label>
+
                     <label>Gestor Responsável:
                         <input 
                             className={`input-form ${errors?.manager && 'required'}` } 
@@ -84,11 +96,25 @@ export default function SolicitacaoDeFerias(){
 
                 </div>
 
+                <div className='form-inline-center'>
+                    <label>Período de férias referente ao ano:</label>
+                        <input
+                            id='periodo'
+                            className='input-form'
+                            type='number'
+                            min="2020" 
+                            max="2099" 
+                            step="1"
+                            {...register("timeCourse", {required: true})}
+                            placeholder={errors?.total ? `Campo obrigatório!` : '2020'}>
+                        </input>
+                </div>
+
                 <div className='form-inline'>
                     <label>Total de dias que pretende gozar:
                         <input 
                             className={`input-form ${errors?.total && 'required'}` } 
-                            type='num' 
+                            type='number'
                             {...register("total", {required: true})}
                             placeholder={errors?.total ? `Campo obrigatório!` : ''}>
                         </input>
