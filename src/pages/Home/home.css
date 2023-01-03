@@ -302,4 +302,9 @@ button:hover, .link-spam:hover {
     .group-container p {
         font-size: .8em;
     }
+
+    .nav {
+        width: 100%;
+        height: auto;
+    }
 }

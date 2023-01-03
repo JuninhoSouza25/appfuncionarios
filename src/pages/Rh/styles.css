@@ -22,3 +22,12 @@
 .form-item:hover {
     scale: 1;
 }
+
+@media screen and (max-width: 440px){
+    .forms-container {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}

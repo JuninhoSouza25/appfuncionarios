@@ -1,15 +1,19 @@
 import React, {useState} from 'react'
 import { useForm } from 'react-hook-form'
+import axios from 'axios'
 import './styles.css'
 import '../../pages/Home/home.css'
 import Loading from '../Loading'
 import { Link } from 'react-router-dom'
+
 
 export default function JustificativaDePonto(){
     const { register, handleSubmit, watch, formState: { errors } } = useForm()
     const [ selectField, setSelectField ] = useState(false);
     const [ sucessField, setSucessField ] = useState(false);
     const [ isLoading, setIsLoading ] = useState(false);
+    const [selectedFile, setSelectedFile] = useState();
+    const [selectedImage, setSelectedImage] = useState("");
 
     function handleSelectField(event){
         const selectField = event.target
@@ -20,11 +24,67 @@ export default function JustificativaDePonto(){
         }
     }
 
+    const handleUpload = async (e, data) => {
+        e.preventDefault()
+        /*try {
+            const formData = new FormData();
+            formData.append("image", selectedFile);
+            const { data } = await axios.post("http://localhost:3001/api/upload", formData);
+            data && console.log(selectedFile)
+        } catch (err) {
+            console.error(err)
+        }*/
+        let config = {
+            method: "post",
+            enctype:'multipart/form-data',
+            url: `http://localhost:3001/api/upload`,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            data: {
+              image: data,
+            },
+          };
+
+          try {
+            const response = await axios(config);
+            if(response.status === 200){
+                console.log("Enviado")
+            }
+        } catch (err) {
+            console.error(err)
+        }
+    }
+
+    /*async function upload(data){
+        console.log(data)
+        let config = {
+            method: "post",
+            enctype:'multipart/form-data',
+            url: `http://localhost:3001/api/upload`,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            data: {
+              image: data,
+            },
+          };
+
+          try {
+            const response = await axios(config);
+            if(response.status === 200){
+                console.log("Enviado")
+            }
+        } catch (err) {
+            console.error(err)
+        }
+    }}*/
+
     async function onSubmit(data){  
         let config = {
             method: 'post',
             enctype:'multipart/form-data',
-            url: `https://api-mhedica-funcionarios.vercel.app/api/justificativa-ponto`,
+            url: `http://localhost:3001/api/justificativa-ponto`,
             headers: {
                 'Content-Type': 'application/json',
             },
@@ -55,7 +115,7 @@ export default function JustificativaDePonto(){
                 <p>Versão: 1.0</p>
             </div>
 
-            <div className='form-wrapper'>
+            <div>
                 <div className='form-inline'>
 
                     <label>Nome:
@@ -212,7 +272,20 @@ export default function JustificativaDePonto(){
                     </label>
                 )}
 
-
+                <form className='input-attachment-wrapper' encype='multipart/form-data'>
+                        <label>Enviar Imagem:</label>
+                        <input className='input-form'
+                                type="file"
+                                onChange={({ target }) => {
+                                    if (target.files) {
+                                        const file = target.files[0];
+                                        setSelectedImage(URL.createObjectURL(file));
+                                        setSelectedFile(file)
+                                    }
+                                }}>
+                        </input>
+                        <button className='button-spam link-spam' onClick={handleUpload}>Upload</button>
+                </form>
 
                 {isLoading && !sucessField ? (
                     <div className='form-inline'>
@@ -230,7 +303,7 @@ export default function JustificativaDePonto(){
                 {!sucessField && (
                     <button 
                         onClick={() => handleSubmit(onSubmit)()} 
-                        className='button-spam center' 
+                        className='button-spam' 
                         type='submit' >Enviar
                     </button>
                 )}

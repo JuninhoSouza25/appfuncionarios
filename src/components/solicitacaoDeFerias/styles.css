@@ -46,4 +46,31 @@ label {
 
 .sucess {
     color: green;
+    margin: 15px 0;
+}
+
+@media screen and (max-width: 440px) {
+    .cabecalho {
+        width: 100%;
+        padding-right: 15px;
+    }
+
+    .cabecalho h2 {
+        text-align: center;
+    }
+
+    .form-inline {
+        flex-direction: column;
+        width: 100%;
+        gap: 0;
+    }
+
+    .form-wrapper {
+        width: 100%;
+    }
+
+    .center {
+        margin: 0;
+    }
+
 }

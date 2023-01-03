@@ -4,7 +4,7 @@ import axios from 'axios'
 import './styles.css'
 import Loading from '../Loading'
 
-export default function SolicitacaoDeFerias(){
+export default function SolicitacaoDePessoal(){
     const { register, handleSubmit, formState: { errors } } = useForm()
     const [ sucessField, setSucessField ] = useState(false);
     const [ isLoading, setIsLoading ] = useState(false);
@@ -38,10 +38,12 @@ export default function SolicitacaoDeFerias(){
     return(
         <>
             <div className='cabecalho'>
-                <h2>Solicitação de Férias</h2>
+                <h2>Ficha de Solicitação de Pessoal</h2>
+                <p>RQ-016-X</p>
+                <p>Versão: 1.0</p>
             </div>
 
-            <div className='form-wrapper'>
+            <div>
                 <div className='form-inline'>
 
                     <label>Nome:
@@ -119,8 +121,8 @@ export default function SolicitacaoDeFerias(){
 
                 {!sucessField && (
                     <button 
-                        onClick={() => handleSubmit(onSubmit)()}
-                        className='button-spam center' 
+                        onClick={() => handleSubmit(onSubmit)()} 
+                        className='button-spam' 
                         type='submit' >Enviar
                     </button>
                 )}
