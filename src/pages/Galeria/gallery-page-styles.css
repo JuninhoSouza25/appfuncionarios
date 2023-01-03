@@ -55,6 +55,13 @@
     color: #fff;
 }
 
+.form-inline {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    gap: 3px;
+}
+
 @media screen and (max-width: 440px){
 
     .gallery-page {

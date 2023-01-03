@@ -65,7 +65,9 @@ export default function Galeria(){
             )}
             <div className="loading">
                 {loading && (
-                    <Loading />
+                    <div className='form-inline'>
+                        <Loading />Carregando imagens...
+                    </div>
                 )}
             </div>
                 {galleryOn && ( 

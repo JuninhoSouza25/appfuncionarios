@@ -131,6 +131,7 @@ export default function Home(){
                 <button className="button-spam" onClick={handleComplete}>Lista completa</button>
                 <button className="button-spam" onClick={handleMenu}>Grupos de Emails</button>
                 <Link className="button-spam link-spam" to="/galeria">Galeria de Fotos</Link>
+                <Link className="button-spam link-spam" to="/rh">RH</Link>
                 <Link className="button-spam link-spam" to="/chamado">Chamado SAP</Link>
             </div>
         )}
