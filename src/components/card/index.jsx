@@ -1,9 +1,15 @@
+import Loading from "../Loading"
+
 export default function Card({result, group}){
+    const imagem = result.foto
+
     return(
         <div className="card-container" key={result.chave}>
             <div className='card'>
-              <div className="container-img">
-                  <img className="img-individuo" src={result.foto} alt={`Imagem ${result.nome}`} />
+              <div className="container-img">{
+                imagem ? <img className="img-individuo" src={imagem} alt={`Imagem ${result.nome}`} /> : <Loading /> 
+              }
+                  
               </div>
               <div className="container-funcionario">
                   <h1>{result.nome} {result.sobrenome} </h1>
