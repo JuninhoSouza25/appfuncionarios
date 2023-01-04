@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import './home.css';
 import Logo from '../../components/logo';
 import Search from '../../components/search';
 import LogoMedtech from '../../components/logoMedtech';
 import Error from '../../components/error';
-import { pessoa, grupos } from '../../dados';
 import Birthday from "../../components/birthday";
 import Card from "../../components/card";
 import Grupos from "../../components/grupos";
+import axios from "axios";
 
 export default function Home(){
   const [error, setError] = useState(false);
@@ -22,6 +22,32 @@ export default function Home(){
   const [menu, setMenu] = useState(true);
   const [logoOn, setLogoOn] = useState(true);
   const [complete, setComplete] = useState(false);
+  const [dataEmployee, setDataEmployee] = useState([]);
+  const [dataGroup, setDataGroup] = useState([]);
+
+  useEffect(() => {
+    axios
+    .get('https://api-mhedica-funcionarios.vercel.app/api/funcionario')
+    .then((response) => {
+      setDataEmployee(response.data)
+      return dataEmployee
+    })
+    .catch((err) => {
+      console.log(err)
+    })    
+  },[])
+
+  useEffect(() => {
+    axios
+    .get('https://api-mhedica-funcionarios.vercel.app/api/grupos')
+    .then((response) => {
+      setDataGroup(response.data)
+      return dataGroup
+    })
+    .catch((err) => {
+      console.log(err)
+    })    
+  },[])
 
 
   function handleCard(){
@@ -86,7 +112,7 @@ export default function Home(){
 
   function handleSearch(){
   
-      pessoa.map((name) => {
+      dataEmployee.map((name) => {
           if (name.chave.includes(convertToSlug(textInput))){
             searchResult = name
           }
@@ -96,7 +122,7 @@ export default function Home(){
         handleError()
       }
 
-      grupos.map((element) => {
+      dataGroup.map((element) => {
         if (element.key.includes(searchResult.chave)){
           grupoEmail.push(element.grupo)
           grupoEmail.push(', ')
@@ -117,7 +143,7 @@ export default function Home(){
         .replace(/[\s\W-]+/g, '-') // Replace spaces, non-word characters and dashes with a single dash (-)
   }
 
-  const lista = pessoa.filter((name) => name.chave.includes(convertToSlug(textInput)))
+  const lista = dataEmployee.filter((name) => name.chave.includes(convertToSlug(textInput)))
 
   return (
     <div className='home'>
@@ -162,7 +188,7 @@ export default function Home(){
           <div className="button-spam-container">
               <button className="button-spam" onClick={handleButtonBack}>Início</button>
           </div>
-          {pessoa.map((pessoa) => (
+          {dataEmployee.map((pessoa) => (
             <Card key={pessoa.chave} result={pessoa} group={group} />
           ))}
           </>
@@ -179,7 +205,7 @@ export default function Home(){
             <div className="button-spam-container">
               <button className="button-spam" onClick={handleButtonBack}>Início</button>
             </div>
-            <Grupos grupos={grupos} />
+            <Grupos grupos={dataGroup} />
           </>
         )}
 
