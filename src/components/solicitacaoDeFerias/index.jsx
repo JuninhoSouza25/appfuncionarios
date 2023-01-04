@@ -29,7 +29,7 @@ export default function SolicitacaoDeFerias(){
             if(response.status === 200){
                 setSucessField(true)
                 console.log("sucesso")
-                window.location.reload(false)
+                //window.location.reload(false)
             }
         } catch (err) {
             console.error(err)
