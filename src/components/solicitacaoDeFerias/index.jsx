@@ -10,10 +10,12 @@ export default function SolicitacaoDeFerias(){
     const [ isLoading, setIsLoading ] = useState(false);
 
     async function onSubmit(data){  
+        const URL = import.meta.env.VITE_URL
+
         let config = {
             method: 'post',
             enctype:'multipart/form-data',
-            url: `https://api-mhedica-funcionarios.vercel.app/api/solicitacao-de-ferias`,
+            url: `${URL}/api/solicitacao-de-ferias`,
             headers: {
                 'Content-Type': 'application/json',
             },
