@@ -9,6 +9,7 @@ import Birthday from "../../components/birthday";
 import Card from "../../components/card";
 import Grupos from "../../components/grupos";
 import axios from "axios";
+import Loading from "../../components/Loading";
 
 export default function Home(){
   const [error, setError] = useState(false);
@@ -174,7 +175,9 @@ export default function Home(){
               onClick={handleCard}/>
           </>
         )}
-        
+
+        {!dataEmployee && <Loading />}
+
         {error && (
             <Error />
         )}
